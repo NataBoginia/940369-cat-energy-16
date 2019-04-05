@@ -3,10 +3,96 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500" rel="stylesheet">
   </head>
   <body>
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img class="page-header__logo-img" src="#" alt="Логотип компании Кэт энерджи" width="191" height="39">
+      </a>
+      <nav class="page-header__menu main-menu">
+        <button class="main-menu__toggle" type="button">Открыть меню</button>
+        <ul class="main-menu__list">
+          <li class="main-menu__item main-menu__item--active">
+            <a>Главная</a>
+            </li>
+          <li class="main-menu__item">
+            <a href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-menu__item">
+            <a href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+    <main class="page-main">
+      <h1 class="visually-hidden">Интернет-магазин функционального питания для котов Кэт энерджи</h1>
 
+      <section class="banner">
+        <h2 class="banner__title">Функциональное питание для котов</h2>
+        <p class="banner__text">Занялся собой? Займись котом!</p>
+        <img class="banner__img" src="#" alt="Упаковка питания для котов Кэт энерджи" width="280" height="270">
+        <a class="banner__btn button" href="form.html">Подобрать программу</a>
+      </section>
+
+      <section class="goals">
+        <h2 class="visually-hidden">Цели, достижимые с функциональным питанием</h2>
+        <section class="goal goal--slim">
+          <h3 class="goal__title">Похудение</h3>
+          <p class="goal__text">Ваш кот весит больше собаки и почти утратил
+            способность лазить по деревьям? Пора на диету!
+            Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+          <a class="goal__link" href="catalog.html">Каталог Slim</a>
+        </section>
+        <section class="goal goal--pro">
+          <h3 class="goal__title">Набор массы</h3>
+          <p class="goal__text">Заработать авторитет среди дворовых котов
+          и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+          <a class="goal__link" href="catalog.html">Каталог Pro</a>
+        </section>
+      </section>
+
+      <section class="guide">
+        <h2 class="guide__title">Как это работает</h2>
+        <ul class="guide__list">
+          <li class="guide__item guide__item--natural">
+            Функциональное питание содержит только полезные питательные вещества.
+          </li>
+          <li class="guide__item guide__item--powder">
+            Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+          </li>
+          <li class="guide__item guide__item--mealtime">
+            Замените один-два приема обычной еды на наше функциональное питание.
+          </li>
+          <li class="guide__item guide__item--weight">
+            Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+          </li>
+        </ul>
+      </section>
+
+<!-- Бонусные блоки -->
+    </main>
+
+    <footer class="page-footer">
+      <a class="page-footer__logo">
+        <img class="page-footer__logo-img" src="#" alt="Логотип компании Кэт энерджи" width="128" height="24">
+      </a>
+      <ul class="page-footer__social-list">
+        <li class="page-footer__social-item page-footer__social-item--vk">
+          <a href="#">Кэт энерджи во Вконтакте</a>
+        </li>
+        <li class="page-footer__social-item page-footer__social-item--insta">
+          <a href="#">Кэт энерджи в Инстаграме</a>
+        </li>
+        <li class="page-footer__social-item page-footer__social-item--fb">
+          <a href="#">Кэт энерджи в Фейсбуке</a>
+        </li>
+      </ul>
+      <a class="page-footer__author" href="https://htmlacademy.ru/intensive/adaptive">
+        HTML Academy
+        <img class="page-footer__author-img" src="#" alt="Логотип HTML Academy" width="27" height="34">
+      </a>
+    </footer>
   </body>
 </html>
