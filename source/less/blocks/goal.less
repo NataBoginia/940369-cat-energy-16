@@ -1,7 +1,11 @@
 .goal {
   position: relative;
-  margin-bottom: 23px;
-  padding: 29px 20px 20px 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 17px;
+  padding: 29px 20px 8px 20px;
 
   color: @black-two;
 
@@ -52,7 +56,7 @@
 .goal__title {
   margin: 0;
   margin-left: 70px;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 
   font-weight: normal;
   font-size: 24px;
@@ -63,7 +67,8 @@
 }
 
 .goal__text {
-  padding-bottom: 26px;
+  margin: 0;
+  padding-bottom: 23px;
 
   font-size: 14px;
   line-height: 18px;
@@ -73,8 +78,10 @@
 }
 
 .goal__link {
-  display: block;
-  margin-top: 15px;
+  position: relative;
+
+  margin-right: auto;
+  padding: 17px 35px 17px 0;
 
   font-size: 16px;
   line-height: 16px;
@@ -82,4 +89,9 @@
   text-align: left;
   text-transform: uppercase;
   color: @black-two;
+
+  background-image: url("../../img/icon-right-arrow-long.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 24px 11px;
 }
