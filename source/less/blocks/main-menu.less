@@ -1,17 +1,41 @@
 .main-menu {
+  color: @black-one;
+
   background-color: @white;
-  color: @black;
 }
 
 .main-menu__list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
+.main-menu__item {
+  border-bottom: 1px solid @dark-gray;
+}
+
 .main-menu__link {
-  font-family: @medium-font;
+  display: block;
+  padding: 23px 10px;
+
   font-size: 20px;
   line-height: 20px;
-  text-transform: uppercase;
+  font-family: @medium-font;
   text-align: center;
-  color: @black;
+  text-transform: uppercase;
+  color: @black-one;
+}
+
+.main-menu__toggle {
+  display: block;
+  width: 30px;
+  height: 30px;
+
+  background-color: transparent;
+  background-image: url("../../img/icon-mobile-menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px 19px;
+  border: none;
 }

@@ -1,15 +1,21 @@
 .goal {
   position: relative;
+  margin-bottom: 23px;
+  padding: 29px 20px 20px 20px;
 
   color: @black-two;
 
   background-color: @gray;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   &::before {
     content: "";
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 24px;
+    left: 21px;
 
     width: 50px;
     height: 50px;
@@ -39,32 +45,41 @@
   &--pro::after {
     background-image: url("../../img/icon-cat-pro.svg");
     background-size: 67px 28px;
-    background-position: center;
+    background-position: 2px 24px;
   }
 }
 
 .goal__title {
-  font-family: @regular-font;
-  text-transform: uppercase;
-  text-align: left;
+  margin: 0;
+  margin-left: 70px;
+  margin-bottom: 30px;
+
   font-weight: normal;
   font-size: 24px;
   line-height: 37px;
+  font-family: @regular-font;
+  text-align: left;
+  text-transform: uppercase;
 }
 
 .goal__text {
-  font-family: @add-font;
+  padding-bottom: 26px;
+
   font-size: 14px;
   line-height: 18px;
+  font-family: @add-font;
 
-  border-bottom: 1px solid @border-gray;
+  border-bottom: 1px solid @dark-gray;
 }
 
 .goal__link {
-  font-family: @regular-font;
-  text-transform: uppercase;
-  text-align: left;
-  color: @black-two;
+  display: block;
+  margin-top: 15px;
+
   font-size: 16px;
   line-height: 16px;
+  font-family: @regular-font;
+  text-align: left;
+  text-transform: uppercase;
+  color: @black-two;
 }
