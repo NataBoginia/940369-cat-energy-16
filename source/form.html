@@ -3,24 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>Подбор программы Кэт энерджи</title>
-    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-img" src="#" alt="Логотип компании Кэт энерджи" width="191" height="39">
+        <img class="page-header__logo-img" src="img/logo-mobile.svg" alt="Логотип компании Кэт энерджи" width="191" height="39">
       </a>
       <nav class="page-header__menu main-menu">
-        <button class="main-menu__toggle" type="button">Открыть меню</button>
+        <button class="main-menu__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
         <ul class="main-menu__list">
           <li class="main-menu__item">
-            <a href="index.html">Главная</a>
+            <a class="main-menu__link" href="index.html">Главная</a>
             </li>
           <li class="main-menu__item">
-            <a href="catalog.html">Каталог продукции</a>
+            <a class="main-menu__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-menu__item main-menu__item--active">
-            <a>Подбор программы</a>
+            <a class="main-menu__link">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -32,22 +34,28 @@
 
     <footer class="page-footer">
       <a class="page-footer__logo" href="index.html">
-        <img class="page-footer__logo-img" src="#" alt="Логотип компании Кэт энерджи" width="128" height="24">
+        <img class="page-footer__logo-img" src="img/logo-footer.svg" alt="Логотип компании Кэт энерджи" width="128" height="24">
       </a>
       <ul class="page-footer__social-list">
-        <li class="page-footer__social-item page-footer__social-item--vk">
-          <a href="#">Кэт энерджи во Вконтакте</a>
+        <li>
+          <a class="page-footer__social-link page-footer__social-link--vk" href="#">
+            <span class="visually-hidden">Кэт энерджи во Вконтакте</span>
+          </a>
         </li>
-        <li class="page-footer__social-item page-footer__social-item--insta">
-          <a href="#">Кэт энерджи в Инстаграме</a>
+        <li>
+          <a class="page-footer__social-link page-footer__social-link--insta" href="#">
+            <span class="visually-hidden">Кэт энерджи в Инстаграме</span>
+          </a>
         </li>
-        <li class="page-footer__social-item page-footer__social-item--fb">
-          <a href="#">Кэт энерджи в Фейсбуке</a>
+        <li>
+          <a class="page-footer__social-link page-footer__social-link--fb" href="#">
+            <span class="visually-hidden">Кэт энерджи в Фейсбуке</span>
+          </a>
         </li>
       </ul>
       <a class="page-footer__author" href="https://htmlacademy.ru/intensive/adaptive">
         HTML Academy
-        <img class="page-footer__author-img" src="#" alt="Логотип HTML Academy" width="27" height="34">
+        <img class="page-footer__author-img" src="img/htmlacademy.svg" alt="Логотип HTML Academy" width="40" height="40">
       </a>
     </footer>
   </body>

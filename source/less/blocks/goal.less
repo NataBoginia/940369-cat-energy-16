@@ -1,0 +1,97 @@
+.goal {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 17px;
+  padding: 29px 20px 8px 20px;
+
+  color: @color-text-sub;
+
+  background-color: @color-bg-sub;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 21px;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: @color-accent;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    width: 70px;
+    height: 70px;
+
+    background-repeat: no-repeat;
+  }
+
+  &--slim::after {
+    background-image: url("../../img/icon-cat-slim.svg");
+    background-size: 35px 49px;
+    background-position: center;
+  }
+
+  &--pro::after {
+    background-image: url("../../img/icon-cat-pro.svg");
+    background-size: 67px 28px;
+    background-position: 2px 24px;
+  }
+}
+
+.goal__title {
+  margin: 0;
+  margin-left: 70px;
+  margin-bottom: 31px;
+
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 37px;
+  font-family: @font-regular;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.goal__text {
+  margin: 0;
+  padding-bottom: 23px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: @font-add;
+
+  border-bottom: 1px solid @color-border-sub;
+}
+
+.goal__link {
+  position: relative;
+
+  margin-right: auto;
+  padding: 17px 35px 17px 0;
+
+  font-size: 16px;
+  line-height: 16px;
+  font-family: @font-regular;
+  text-align: left;
+  text-transform: uppercase;
+  color: @color-text-sub;
+
+  background-image: url("../../img/icon-right-arrow-long.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 24px 11px;
+}

@@ -1,0 +1,72 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+
+  padding: 35px 20px;
+
+  text-align: center;
+
+  background-color: @color-bg-sub;
+  border: 1px dashed #000000;
+}
+
+.page-footer__logo {
+  margin-bottom: 25px;
+}
+
+.page-footer__social-list {
+  display: flex;
+  margin: 0 auto;
+  padding: 12px 0;
+
+  list-style: none;
+  border-top: 1px solid @color-border-main;
+  border-bottom: 1px solid @color-border-main;
+}
+
+.page-footer__author {
+  display: flex;
+  margin-top: 20px;
+
+  font-size: 16px;
+  line-height: 16px;
+  font-family: @font-add;
+  text-align: left;
+  color: @color-text-main;
+}
+
+.page-footer__author-name {
+  padding-top: 12px;
+}
+
+.page-footer__author-img {
+  margin-left: auto;
+}
+
+.page-footer__social-link {
+  display: block;
+  width: 40px;
+  height: 40px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &--vk {
+    margin-right: 14px;
+
+    background-image: url("../../img/icon-vk-mobile.svg");
+    background-size: 22px 12px;
+  }
+
+  &--insta {
+    margin-right: 14px;
+
+    background-image: url("../../img/icon-insta-mobile.svg");
+    background-size: 17px 17px;
+  }
+
+  &--fb {
+    background-image: url("../../img/icon-fb-mobile.svg");
+    background-size: 10px 19px;
+  }
+}
