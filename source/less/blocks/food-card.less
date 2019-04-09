@@ -1,10 +1,10 @@
 .food-card {
   display: flex;
   flex-direction: column;
-  padding-bottom: 25px;
+  padding: 25px 10px;
 
-  background-color: @white;
-  border-bottom: 1px solid @dark-gray;
+  background-color: @color-bg-main;
+  border-bottom: 1px solid @color-border-sub;
 
   &--more {
     background-image: url("../../img/icon-plus-mobile.svg");
@@ -29,9 +29,9 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
-  font-family: @regular-font;
+  font-family: @font-regular;
   text-transform: uppercase;
-  color: @black-one;
+  color: @color-title;
 
   &--more {
     margin-top: 70px;
@@ -43,8 +43,8 @@
 .food-card__table {
   font-size: 12px;
   line-height: 16px;
-  font-family: @add-font;
-  color: @greyish-brown;
+  font-family: @font-add;
+  color: @color-text-main;
 }
 
 .food-card__parameter-name {
@@ -57,9 +57,9 @@
 
 .food-card__btn {
   &--more {
-    color: @greyish-brown;
+    color: @color-text-main;
 
-    background-color: @white-three;
+    background-color: @color-bg-sub;
   }
 }
 
@@ -68,7 +68,7 @@
 
   font-size: 12px;
   line-height: 16px;
-  font-family: @add-font;
+  font-family: @font-add;
   text-align: center;
-  color: @greyish-brown;
+  color: @color-text-main;
 }
