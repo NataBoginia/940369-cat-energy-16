@@ -1,16 +1,28 @@
 .food-card {
   display: flex;
   flex-direction: column;
-  padding: 25px 10px;
+
+  padding: 15px 0;
 
   background-color: @color-bg-main;
   border-bottom: 1px solid @color-border-sub;
 
   &--more {
+    position: relative;
+  }
+
+  &--more::before {
+    content: "";
+
+    position: absolute;
+
+    align-self: center;
+
+    width: 31px;
+    height: 31px;
+
     background-image: url("../../img/icon-plus-mobile.svg");
     background-repeat: no-repeat;
-    background-position: top;
-    background-size: 31px 31px;
   }
 }
 
@@ -23,10 +35,8 @@
 }
 
 .food-card__title {
-  margin: 0;
-  padding: 0;
+  .reset-header();
 
-  font-weight: normal;
   font-size: 16px;
   line-height: 20px;
   font-family: @font-regular;
@@ -34,9 +44,14 @@
   color: @color-title;
 
   &--more {
-    margin-top: 70px;
+    margin-top: 52px;
 
     text-align: center;
+  }
+
+  &--extra {
+    line-height: 16px;
+    color: @color-text-sub;
   }
 }
 
@@ -45,6 +60,11 @@
   line-height: 16px;
   font-family: @font-add;
   color: @color-text-main;
+
+  &--extra {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .food-card__parameter-name {

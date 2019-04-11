@@ -1,12 +1,35 @@
+.page-main {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .page-main__title {
-  margin: 15px 0 0 20px;
-  padding: 0;
+  .reset-header();
+
   padding-bottom: 27px;
 
-  font-weight: normal;
   font-size: 36px;
   line-height: 60px;
   font-family: @font-regular;
 
   border-bottom: 1px solid @color-border-sub;
+
+  &--non-bordered {
+    border: none;
+  }
+}
+
+.page-main__program-request {
+  border: 1px dashed #000000;
+}
+
+.page-main__request-desc {
+  margin: 0;
+  margin-bottom: 40px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: @font-regular;
+  text-align: left;
+  color: @color-title;
 }

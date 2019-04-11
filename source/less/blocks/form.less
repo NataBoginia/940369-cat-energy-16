@@ -1,0 +1,46 @@
+.form {
+  font-size: 16px;
+  line-height: 18px;
+  font-family: @font-regular;
+  text-align: left;
+  text-transform: uppercase;
+  color: @color-text-sub;
+}
+
+
+.form__list {
+  .reset-list();
+}
+
+.form__part {
+  margin: 0;
+  padding: 0;
+
+  border: 1px dashed #000000;
+}
+
+.form__title {
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: none;
+  color: @color-title;
+}
+
+.form__input::-webkit-input-placeholder {
+  color: @color-text-main;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.form__note {
+  font-size: 14px;
+  line-height: 15px;
+  font-family: @font-add;
+  text-align: center;
+  text-transform: none;
+  color: @color-text-main;
+}
+
+.form__input--text-area {
+  resize: none;
+}
