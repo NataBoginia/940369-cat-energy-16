@@ -238,34 +238,106 @@
         </ul>
       </section>
 
-      <!-- Бонусные блоки -->
+      <section class="extra-catalog">
+        <h2 class="extra-catalog__title">Дополнительные товары</h2>
+        <ul class="extra-catalog__list">
+          <li class="extra-catalog__item food-card food-card--extra">
+            <a class="food-card__link" href="#">
+              <h3 class="food-card__title food-card__title--extra">Сахарозаменитель</h3>
+            </a>
+            <table class="food-card__table food-card__table--extra">
+              <tr>
+                <td class="food-card__parameter-name food-card__parameter-name--extra">1 упаковка (100 г)</td>
+                <td class="food-card__parameter-value food-card__parameter-value--extra">200 Р.</td>
+              </tr>
+            </table>
+            <a class="food-card__btn button" href="#">Заказать</a>
+          </li>
+
+          <li class="extra-catalog__item food-card food-card--extra">
+            <a class="food-card__link" href="#">
+              <h3 class="food-card__title food-card__title--extra">Питьевая вода</h3>
+            </a>
+            <table class="food-card__table food-card__table--extra">
+              <tr>
+                <td class="food-card__parameter-name food-card__parameter-name--extra">5 литров</td>
+                <td class="food-card__parameter-value food-card__parameter-value--extra">50 Р.</td>
+              </tr>
+            </table>
+            <a class="food-card__btn button" href="#">Заказать</a>
+          </li>
+
+          <li class="extra-catalog__item food-card food-card--extra">
+            <a class="food-card__link" href="#">
+              <h3 class="food-card__title food-card__title--extra">Молоко</h3>
+            </a>
+            <table class="food-card__table food-card__table--extra">
+              <tr>
+                <td class="food-card__parameter-name food-card__parameter-name--extra">1 литр</td>
+                <td class="food-card__parameter-value food-card__parameter-value--extra">100 Р.</td>
+              </tr>
+            </table>
+            <a class="food-card__btn button" href="#">Заказать</a>
+          </li>
+
+          <li class="extra-catalog__item food-card food-card--extra">
+            <a class="food-card__link" href="#">
+              <h3 class="food-card__title food-card__title--extra">Витамины</h3>
+            </a>
+            <table class="food-card__table food-card__table--extra">
+              <tr>
+                <td class="food-card__parameter-name food-card__parameter-name--extra">1 упаковка (30 г)</td>
+                <td class="food-card__parameter-value food-card__parameter-value--extra">300 Р.</td>
+              </tr>
+            </table>
+            <a class="food-card__btn button" href="#">Заказать</a>
+          </li>
+        </ul>
+        <div class="extra-catalog__gift">
+          <p class="extra-catalog__gift-text">Закажите все и получите чехол для кота в подарок!</p>
+        </div>
+      </section>
     </main>
 
     <footer class="page-footer">
-      <a class="page-footer__logo" href="index.html">
-        <img class="page-footer__logo-img" src="img/logo-footer.svg" alt="Логотип компании Кэт энерджи" width="128" height="24">
-      </a>
-      <ul class="page-footer__social-list">
-        <li>
-          <a class="page-footer__social-link page-footer__social-link--vk" href="#">
-            <span class="visually-hidden">Кэт энерджи во Вконтакте</span>
-          </a>
-        </li>
-        <li>
-          <a class="page-footer__social-link page-footer__social-link--insta" href="#">
-            <span class="visually-hidden">Кэт энерджи в Инстаграме</span>
-          </a>
-        </li>
-        <li>
-          <a class="page-footer__social-link page-footer__social-link--fb" href="#">
-            <span class="visually-hidden">Кэт энерджи в Фейсбуке</span>
-          </a>
-        </li>
-      </ul>
-      <a class="page-footer__author" href="https://htmlacademy.ru/intensive/adaptive">
-        HTML Academy
-        <img class="page-footer__author-img" src="img/htmlacademy.svg" alt="Логотип HTML Academy" width="40" height="40">
-      </a>
+      <section class="page-footer__map map">
+        <h2 class="visually-hidden">Расположение офиса компании Кэт энерджи</h2>
+        <div class="map__desc">
+          <b class="map__title">Приглашаем к сотрудничеству дилеров!</b>
+          <address class="map__address">
+            ул. Большая Конюшенная, д. 19/8<br>
+            Санкт-Петербург
+          </address>
+        </div>
+        <iframe class="map__scheme" src="https://yandex.ru/map-widget/v1/-/CCB2JK0x" width="320" height="370"></iframe>
+      </section>
+
+      <div class="page-footer__container">
+        <a class="page-footer__logo" href="index.html">
+          <img class="page-footer__logo-img" src="img/logo-footer.svg" alt="Логотип компании Кэт энерджи" width="128" height="24">
+        </a>
+        <ul class="page-footer__social-list">
+          <li>
+            <a class="page-footer__social-link page-footer__social-link--vk" href="#">
+              <span class="visually-hidden">Кэт энерджи во Вконтакте</span>
+            </a>
+          </li>
+          <li>
+            <a class="page-footer__social-link page-footer__social-link--insta" href="#">
+              <span class="visually-hidden">Кэт энерджи в Инстаграме</span>
+            </a>
+          </li>
+          <li>
+            <a class="page-footer__social-link page-footer__social-link--fb" href="#">
+              <span class="visually-hidden">Кэт энерджи в Фейсбуке</span>
+            </a>
+          </li>
+        </ul>
+        <a class="page-footer__author" href="https://htmlacademy.ru/intensive/adaptive">
+          HTML Academy
+          <img class="page-footer__author-img" src="img/htmlacademy.svg" alt="Логотип HTML Academy" width="40" height="40">
+        </a>
+      </div>
     </footer>
   </body>
 </html>
