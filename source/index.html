@@ -79,7 +79,7 @@
         <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив
         свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих
         тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <ul class="example__parameters-list">
+        <ul class="example__list">
           <li>
             <b class="example__parameter-value">5 кг</b>
             <span class="example__parameter-name">снижение веса</span>
@@ -96,13 +96,10 @@
             <img class="slider__img slider__img--after" src="img/after-mobile@1x.png" alt="Кот Борис после двух месяцев питания кормом Cat Energy Slim" width="320" height="240">
           </div>
           <div class="slider__controls">
-            <button class="slider__btn slider__btn--before">Было</button>
-            <button class="slider__btn slider__btn--after">Стало</button>
-            <div class="slider__scale">
-              <div class="slider__toggle" tabindex="0">
-                <span class="visually-hidden">Сдвинуть маркер, чтобы проследить прогресс кота Бориса</span>
-              </div>
-            </div>
+            <button class="slider__btn slider__btn--before" type="button">Было</button>
+            <input class="slider__range" type="range" id="slider-range" value="50" min="0" max="100">
+            <label class="visually-hidden" for="slider-range">Сдвинуть маркер, чтобы проследить прогресс кота Бориса</label>
+            <button class="slider__btn slider__btn--after" type="button">Стало</button>
           </div>
         </div>
       </section>
