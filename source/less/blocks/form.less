@@ -1,4 +1,7 @@
 .form {
+  display: flex;
+  flex-direction: column;
+
   font-size: 16px;
   line-height: 18px;
   font-family: @font-regular;
@@ -7,12 +10,21 @@
   color: @color-text-sub;
 }
 
-
 .form__list {
   .reset-list();
+
+  margin-bottom: 25px;
+
+  &--bordered {
+    margin: 0 -20px;
+    padding: 25px 20px;
+
+    border: 1px solid @color-border-main;
+  }
 }
 
 .form__part {
+  display: flex;
   margin: 0;
   padding: 0;
 
@@ -20,16 +32,28 @@
 }
 
 .form__title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 35px;
+
   font-size: 24px;
   line-height: 24px;
   text-transform: none;
   color: @color-title;
-}
 
-.form__input::-webkit-input-placeholder {
-  color: @color-text-main;
-  text-transform: uppercase;
-  opacity: 1;
+  &::after {
+    content: "";
+
+    flex-grow: 1;
+    margin-left: 22px;
+    margin-right: -20px;
+
+    width: 99px;
+    height: 3px;
+
+    background-color: @color-accent;
+  }
 }
 
 .form__note {
@@ -41,6 +65,158 @@
   color: @color-text-main;
 }
 
+.form__btn {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+//----------------------------------------------------
+// Стили инпутов
+//----------------------------------------------------
+
+.form__input-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  &--options {
+    margin-bottom: 25px;
+    margin-left: 46px;
+  }
+}
+
+.form__input {
+  box-sizing: border-box;
+  padding: 12px;
+  padding-left: 12px;
+  padding-right: 10px;
+
+  border: none;
+  outline: 1px solid fade(@color-border-main, 50%);
+}
+
+.form__label {
+  flex-shrink: 0;
+}
+
+//----------------------------------------------------
+// Стили для текстовых инпутов
+
+.form__input--text {
+  margin-left: 15px;
+
+  flex-grow: 1;
+}
+
 .form__input--text-area {
+  width: 100%;
+  margin-bottom: 25px;
+
   resize: none;
+}
+
+.form__input::-webkit-input-placeholder {
+  color: @color-text-main;
+  text-transform: uppercase;
+}
+
+// Стили для поведения текстовых инпутов
+
+.form__input--text:hover {
+  outline-color: @color-border-main;
+}
+
+.form__input--text:active,
+.form__input--text:focus {
+  outline-color: @color-text-main;
+  outline-width: 2px;
+}
+
+// Стили для текстовых инпутов с иконками
+
+.form__input--icon {
+  padding-right: 35px;
+
+  background-repeat: no-repeat;
+}
+
+.form__input--email {
+  background-image: url("../../img/icon-mail.svg");
+  background-size: 18px 14px;
+  background-position: 95% center;
+}
+
+.form__input--phone {
+  background-image: url("../../img/icon-phone.svg");
+  background-size: 21px 21px;
+  background-position: 95% center;
+}
+
+//-------------------------------------------------------
+// Общие стили для стилизации радиобаттонов и чекбоксов
+
+.form__label--icon {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid @color-border-main;
+    transform: translateX(-46px) translateY(-50%);
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+  }
+}
+
+.form__label--radio::before {
+  border-radius: 50%;
+}
+
+// Общие стили для поведения радиобаттонов и чекбоксов
+
+.form__input:hover + .form__label--icon::before,
+.form__input:focus + .form__label--icon::before {
+  border-color: @color-border-hover;
+}
+
+.form__input:disabled + .form__label--icon::before,
+.form__input:disabled + .form__label--icon {
+  border-color: @color-border-hover;
+  opacity: 0.3;
+}
+
+// Стили для поведения радиобаттонов
+
+.form__input--radio:checked + .form__label--icon::after {
+  width: 12px;
+  height: 12px;
+
+  background-color: @color-accent;
+  border-radius: 50%;
+  transform: translateX(-46px + 32 / 2 - 12 / 2) translateY(-50%);
+}
+
+// Стили для поведения чекбоксов
+
+.form__input--checkbox:checked + .form__label--icon::after {
+  width: 9px;
+  height: 18px;
+
+  border: 2px solid @color-accent;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg) translateX(-46px + 32 / 2 - 12 / 2) translateY(15px);
 }
