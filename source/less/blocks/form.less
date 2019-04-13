@@ -24,7 +24,6 @@
 }
 
 .form__part {
-  display: flex;
   margin: 0;
   padding: 0;
 
@@ -49,7 +48,7 @@
     margin-left: 22px;
     margin-right: -20px;
 
-    width: 99px;
+    min-width: 99px;
     height: 3px;
 
     background-color: @color-accent;
@@ -71,7 +70,7 @@
 }
 
 //----------------------------------------------------
-// Стили инпутов
+// Общие стили инпутов
 //----------------------------------------------------
 
 .form__input-wrapper {
@@ -86,10 +85,9 @@
 }
 
 .form__input {
-  box-sizing: border-box;
+  width: 100%;
+  min-width: 50px;
   padding: 12px;
-  padding-left: 12px;
-  padding-right: 10px;
 
   border: none;
   outline: 1px solid fade(@color-border-main, 50%);
@@ -104,12 +102,10 @@
 
 .form__input--text {
   margin-left: 15px;
-
-  flex-grow: 1;
 }
 
 .form__input--text-area {
-  width: 100%;
+  width: auto;
   margin-bottom: 25px;
 
   resize: none;
@@ -120,14 +116,32 @@
   text-transform: uppercase;
 }
 
+.form__input::-moz-placeholder {
+  color: @color-text-main;
+  text-transform: uppercase;
+}
+
+.form__input:-moz-placeholder {
+  color: @color-text-main;
+  text-transform: uppercase;
+}
+
+.form__input:-ms-input-placeholder {
+  color: @color-text-main;
+  text-transform: uppercase;
+}
+
 // Стили для поведения текстовых инпутов
 
-.form__input--text:hover {
+.form__input--text:hover,
+.form__input--text-area:hover {
   outline-color: @color-border-main;
 }
 
 .form__input--text:active,
-.form__input--text:focus {
+.form__input--text:focus,
+.form__input--text-area:active,
+.form__input--text-area:focus {
   outline-color: @color-text-main;
   outline-width: 2px;
 }
@@ -187,9 +201,14 @@
 
 // Общие стили для поведения радиобаттонов и чекбоксов
 
-.form__input:hover + .form__label--icon::before,
+.form__input:hover + .form__label--icon::before {
+  border-color: @color-border-hover;
+}
+
 .form__input:focus + .form__label--icon::before {
   border-color: @color-border-hover;
+  outline: 1px dotted @color-text-main;
+  outline-offset: 3px;
 }
 
 .form__input:disabled + .form__label--icon::before,
