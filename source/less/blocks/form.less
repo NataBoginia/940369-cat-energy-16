@@ -91,151 +91,168 @@
 
   border: none;
   outline: 1px solid fade(@color-border-main, 50%);
+  //----------------------------------------------------
+  // Стили для текстовых инпутов
+  &--text {
+    margin-left: 15px;
+
+    &:hover {
+      outline-color: @color-border-main;
+    }
+
+    &:focus,
+    &:active {
+      outline-color: @color-text-main;
+      outline-width: 2px;
+    }
+  }
+
+  &--text-area {
+    width: auto;
+    margin-bottom: 25px;
+
+    resize: none;
+
+    &:hover {
+      outline-color: @color-border-main;
+    }
+
+    &:focus,
+    &:active {
+      outline-color: @color-text-main;
+      outline-width: 2px;
+    }
+  }
+
+  &::-webkit-input-placeholder {
+    color: @color-text-main;
+    text-transform: uppercase;
+  }
+
+  &::-moz-placeholder {
+    color: @color-text-main;
+    text-transform: uppercase;
+  }
+
+  &:-moz-placeholder {
+    color: @color-text-main;
+    text-transform: uppercase;
+  }
+
+  &:-ms-input-placeholder {
+    color: @color-text-main;
+    text-transform: uppercase;
+  }
+
+  // Стили для текстовых инпутов с иконками
+
+  &--icon {
+    padding-right: 35px;
+
+    background-repeat: no-repeat;
+  }
+
+  &--email {
+    background-image: url("../img/icon-mail.svg");
+    background-size: 18px 14px;
+    background-position: 95% center;
+  }
+
+  &--phone {
+    background-image: url("../img/icon-phone.svg");
+    background-size: 21px 21px;
+    background-position: 95% center;
+  }
+
+  // Общие стили для поведения радиобаттонов и чекбоксов
+
+  &:hover {
+    & + .form__label--icon::before {
+      border-color: @color-border-hover;
+    }
+  }
+
+  &:focus {
+    & + .form__label--icon::before {
+      border-color: @color-border-hover;
+      outline: 1px dotted @color-text-main;
+      outline-offset: 3px;
+    }
+  }
+
+  &:disabled {
+    & + .form__label--icon::before,
+    & + .form__label--icon {
+      border-color: @color-border-hover;
+      opacity: 0.3;
+    }
+  }
+
+  // Стили для поведения радиобаттонов
+
+  &--radio {
+    &:checked {
+      & + .form__label--icon::after {
+        width: 12px;
+        height: 12px;
+
+        background-color: @color-accent;
+        border-radius: 50%;
+        transform: translateX(-46px + 32 / 2 - 12 / 2) translateY(-50%);
+      }
+    }
+  }
+
+  // Стили для поведения чекбоксов
+
+  &--checkbox {
+    &:checked {
+      & + .form__label--icon::after {
+        width: 9px;
+        height: 18px;
+
+        border: 2px solid @color-accent;
+        border-top: none;
+        border-left: none;
+        transform: rotate(45deg) translateX(-46px + 32 / 2 - 12 / 2) translateY(15px);
+      }
+    }
+  }
 }
 
 .form__label {
   flex-shrink: 0;
-}
 
-//----------------------------------------------------
-// Стили для текстовых инпутов
+  //-------------------------------------------------------
+  // Общие стили для стилизации радиобаттонов и чекбоксов
 
-.form__input--text {
-  margin-left: 15px;
-}
+  &--icon {
+    position: relative;
 
-.form__input--text-area {
-  width: auto;
-  margin-bottom: 25px;
+    &::before {
+      content: "";
 
-  resize: none;
-}
+      position: absolute;
+      top: 50%;
+      left: 0;
 
-.form__input::-webkit-input-placeholder {
-  color: @color-text-main;
-  text-transform: uppercase;
-}
+      width: 30px;
+      height: 30px;
 
-.form__input::-moz-placeholder {
-  color: @color-text-main;
-  text-transform: uppercase;
-}
+      border: 1px solid @color-border-main;
+      transform: translateX(-46px) translateY(-50%);
+    }
 
-.form__input:-moz-placeholder {
-  color: @color-text-main;
-  text-transform: uppercase;
-}
+    &::after {
+      content: "";
 
-.form__input:-ms-input-placeholder {
-  color: @color-text-main;
-  text-transform: uppercase;
-}
-
-// Стили для поведения текстовых инпутов
-
-.form__input--text:hover,
-.form__input--text-area:hover {
-  outline-color: @color-border-main;
-}
-
-.form__input--text:active,
-.form__input--text:focus,
-.form__input--text-area:active,
-.form__input--text-area:focus {
-  outline-color: @color-text-main;
-  outline-width: 2px;
-}
-
-// Стили для текстовых инпутов с иконками
-
-.form__input--icon {
-  padding-right: 35px;
-
-  background-repeat: no-repeat;
-}
-
-.form__input--email {
-  background-image: url("../../img/icon-mail.svg");
-  background-size: 18px 14px;
-  background-position: 95% center;
-}
-
-.form__input--phone {
-  background-image: url("../../img/icon-phone.svg");
-  background-size: 21px 21px;
-  background-position: 95% center;
-}
-
-//-------------------------------------------------------
-// Общие стили для стилизации радиобаттонов и чекбоксов
-
-.form__label--icon {
-  position: relative;
-
-  &::before {
-    content: "";
-
-    position: absolute;
-    top: 50%;
-    left: 0;
-
-    width: 30px;
-    height: 30px;
-
-    border: 1px solid @color-border-main;
-    transform: translateX(-46px) translateY(-50%);
+      position: absolute;
+      top: 50%;
+      left: 0;
+    }
   }
 
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: 50%;
-    left: 0;
+  &--radio::before {
+    border-radius: 50%;
   }
-}
-
-.form__label--radio::before {
-  border-radius: 50%;
-}
-
-// Общие стили для поведения радиобаттонов и чекбоксов
-
-.form__input:hover + .form__label--icon::before {
-  border-color: @color-border-hover;
-}
-
-.form__input:focus + .form__label--icon::before {
-  border-color: @color-border-hover;
-  outline: 1px dotted @color-text-main;
-  outline-offset: 3px;
-}
-
-.form__input:disabled + .form__label--icon::before,
-.form__input:disabled + .form__label--icon {
-  border-color: @color-border-hover;
-  opacity: 0.3;
-}
-
-// Стили для поведения радиобаттонов
-
-.form__input--radio:checked + .form__label--icon::after {
-  width: 12px;
-  height: 12px;
-
-  background-color: @color-accent;
-  border-radius: 50%;
-  transform: translateX(-46px + 32 / 2 - 12 / 2) translateY(-50%);
-}
-
-// Стили для поведения чекбоксов
-
-.form__input--checkbox:checked + .form__label--icon::after {
-  width: 9px;
-  height: 18px;
-
-  border: 2px solid @color-accent;
-  border-top: none;
-  border-left: none;
-  transform: rotate(45deg) translateX(-46px + 32 / 2 - 12 / 2) translateY(15px);
 }

@@ -21,7 +21,7 @@
     width: 31px;
     height: 31px;
 
-    background-image: url("../../img/icon-plus-mobile.svg");
+    background-image: url("../img/icon-plus-mobile.svg");
     background-repeat: no-repeat;
   }
 }
@@ -75,19 +75,21 @@
   text-align: right;
 }
 
-.food-card__btn--more {
-  color: @color-text-main;
+.food-card__btn {
+  &--more {
+    color: @color-text-main;
 
-  background-color: @color-bg-sub;
-}
+    background-color: @color-bg-sub;
+  }
 
-.food-card__btn--more:hover,
-.food-card__btn--more:focus {
-  background-color: @color-button-hover;
-}
+  &--more:hover,
+  &--more:focus {
+    background-color: @color-button-hover;
+  }
 
-.food-card__btn--more:active {
-  color: fade(@color-text-main, 70%);
+  &--more:active {
+    color: fade(@color-text-main, 70%);
+  }
 }
 
 .food-card__text {

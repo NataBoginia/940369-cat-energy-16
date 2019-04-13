@@ -28,7 +28,7 @@
   height: 30px;
 
   background-color: transparent;
-  background-image: url("../../img/icon-mobile-menu.svg");
+  background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 25px 19px;
@@ -45,13 +45,13 @@
   text-align: center;
   text-transform: uppercase;
   color: @color-title;
-}
 
-.main-menu__link:hover,
-.main-menu__link:focus {
-  color: fade(@color-title, 60%);
-}
+  &:hover,
+  &:focus {
+    color: fade(@color-title, 60%);
+  }
 
-.main-menu__link:active {
-  color: fade(@color-title, 30%);
+  &:active {
+    color: fade(@color-title, 30%);
+  }
 }
