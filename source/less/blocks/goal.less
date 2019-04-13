@@ -41,24 +41,24 @@
   }
 
   &--slim::after {
-    background-image: url("../../img/icon-cat-slim.svg");
+    background-image: url("../img/icon-cat-slim.svg");
     background-size: 35px 49px;
     background-position: center;
   }
 
   &--pro::after {
-    background-image: url("../../img/icon-cat-pro.svg");
+    background-image: url("../img/icon-cat-pro.svg");
     background-size: 67px 28px;
     background-position: 2px 24px;
   }
 }
 
 .goal__title {
-  margin: 0;
+  .reset-header();
+
   margin-left: 70px;
   margin-bottom: 31px;
 
-  font-weight: normal;
   font-size: 24px;
   line-height: 37px;
   font-family: @font-regular;
@@ -90,8 +90,20 @@
   text-transform: uppercase;
   color: @color-text-sub;
 
-  background-image: url("../../img/icon-right-arrow-long.svg");
+  background-image: url("../img/icon-right-arrow-long.svg");
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: 24px 11px;
+  background-size: 24px 12px;
+
+  &:hover,
+  &:focus {
+    padding-right: 45px;
+
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    background-size: 34px 12px;
+  }
+
+  &:active {
+    color: fade(@color-text-sub, 30%);
+  }
 }

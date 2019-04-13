@@ -2,15 +2,25 @@
   display: block;
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 12px 10px 10px 10px;
+  padding: 9px 10px 11px 10px;
   width: 100%;
 
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
   font-family: @font-regular;
   text-transform: uppercase;
   text-align: center;
   color: @color-bg-main;
 
   background-color: @color-accent;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: @color-accent-hover;
+  }
+
+  &:active {
+    color: fade(@color-bg-main, 70%);
+  }
 }

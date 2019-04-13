@@ -1,0 +1,258 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-family: @font-regular;
+  text-align: left;
+  text-transform: uppercase;
+  color: @color-text-sub;
+}
+
+.form__list {
+  .reset-list();
+
+  margin-bottom: 25px;
+
+  &--bordered {
+    margin: 0 -20px;
+    padding: 25px 20px;
+
+    border: 1px solid @color-border-main;
+  }
+}
+
+.form__part {
+  margin: 0;
+  padding: 0;
+
+  border: 1px dashed #000000;
+}
+
+.form__title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 35px;
+
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: none;
+  color: @color-title;
+
+  &::after {
+    content: "";
+
+    flex-grow: 1;
+    margin-left: 22px;
+    margin-right: -20px;
+
+    min-width: 99px;
+    height: 3px;
+
+    background-color: @color-accent;
+  }
+}
+
+.form__note {
+  font-size: 14px;
+  line-height: 15px;
+  font-family: @font-add;
+  text-align: center;
+  text-transform: none;
+  color: @color-text-main;
+}
+
+.form__btn {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+//----------------------------------------------------
+// Общие стили инпутов
+//----------------------------------------------------
+
+.form__input-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  &--options {
+    margin-bottom: 25px;
+    margin-left: 46px;
+  }
+}
+
+.form__input {
+  width: 100%;
+  min-width: 50px;
+  padding: 12px;
+
+  border: none;
+  outline: 1px solid fade(@color-border-main, 50%);
+  //----------------------------------------------------
+  // Стили для текстовых инпутов
+  &--text {
+    margin-left: 15px;
+
+    &:hover {
+      outline-color: @color-border-main;
+    }
+
+    &:focus,
+    &:active {
+      outline-color: @color-text-main;
+      outline-width: 2px;
+    }
+  }
+
+  &--text-area {
+    width: auto;
+    margin-bottom: 25px;
+
+    resize: none;
+
+    &:hover {
+      outline-color: @color-border-main;
+    }
+
+    &:focus,
+    &:active {
+      outline-color: @color-text-main;
+      outline-width: 2px;
+    }
+  }
+
+  &::-webkit-input-placeholder {
+    color: @color-text-main;
+    text-transform: uppercase;
+  }
+
+  &::-moz-placeholder {
+    color: @color-text-main;
+    text-transform: uppercase;
+  }
+
+  &:-moz-placeholder {
+    color: @color-text-main;
+    text-transform: uppercase;
+  }
+
+  &:-ms-input-placeholder {
+    color: @color-text-main;
+    text-transform: uppercase;
+  }
+
+  // Стили для текстовых инпутов с иконками
+
+  &--icon {
+    padding-right: 35px;
+
+    background-repeat: no-repeat;
+  }
+
+  &--email {
+    background-image: url("../img/icon-mail.svg");
+    background-size: 18px 14px;
+    background-position: 95% center;
+  }
+
+  &--phone {
+    background-image: url("../img/icon-phone.svg");
+    background-size: 21px 21px;
+    background-position: 95% center;
+  }
+
+  // Общие стили для поведения радиобаттонов и чекбоксов
+
+  &:hover {
+    & + .form__label--icon::before {
+      border-color: @color-border-hover;
+    }
+  }
+
+  &:focus {
+    & + .form__label--icon::before {
+      border-color: @color-border-hover;
+      outline: 1px dotted @color-text-main;
+      outline-offset: 3px;
+    }
+  }
+
+  &:disabled {
+    & + .form__label--icon::before,
+    & + .form__label--icon {
+      border-color: @color-border-hover;
+      opacity: 0.3;
+    }
+  }
+
+  // Стили для поведения радиобаттонов
+
+  &--radio {
+    &:checked {
+      & + .form__label--icon::after {
+        width: 12px;
+        height: 12px;
+
+        background-color: @color-accent;
+        border-radius: 50%;
+        transform: translateX(-46px + 32 / 2 - 12 / 2) translateY(-50%);
+      }
+    }
+  }
+
+  // Стили для поведения чекбоксов
+
+  &--checkbox {
+    &:checked {
+      & + .form__label--icon::after {
+        width: 9px;
+        height: 18px;
+
+        border: 2px solid @color-accent;
+        border-top: none;
+        border-left: none;
+        transform: rotate(45deg) translateX(-46px + 32 / 2 - 12 / 2) translateY(15px);
+      }
+    }
+  }
+}
+
+.form__label {
+  flex-shrink: 0;
+
+  //-------------------------------------------------------
+  // Общие стили для стилизации радиобаттонов и чекбоксов
+
+  &--icon {
+    position: relative;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      width: 30px;
+      height: 30px;
+
+      border: 1px solid @color-border-main;
+      transform: translateX(-46px) translateY(-50%);
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+    }
+  }
+
+  &--radio::before {
+    border-radius: 50%;
+  }
+}

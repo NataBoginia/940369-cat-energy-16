@@ -1,12 +1,32 @@
-.page-main__title {
-  margin: 15px 0 0 20px;
-  padding: 0;
-  padding-bottom: 27px;
+.page-main {
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-  font-weight: normal;
+.page-main__title {
+  .reset-header();
+
+  margin-bottom: 27px;
+
   font-size: 36px;
   line-height: 60px;
   font-family: @font-regular;
+}
 
-  border-bottom: 1px solid @color-border-sub;
+.page-main__program-request {
+  margin-bottom: 35px;
+
+  border: 1px dashed #000000;
+}
+
+.page-main__request-desc {
+  margin: 0;
+  margin-bottom: 35px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: @font-regular;
+  text-align: left;
+  text-transform: uppercase;
+  color: @color-title;
 }

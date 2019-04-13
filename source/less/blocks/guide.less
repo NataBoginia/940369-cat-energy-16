@@ -1,15 +1,12 @@
 .guide {
-  padding: 0 20px;
-
   border: 1px dashed red;
 }
 
 .guide__title {
-  margin: 0;
-  margin-bottom: 30px;
-  padding: 0;
+  .reset-header();
 
-  font-weight: normal;
+  margin-bottom: 30px;
+
   font-size: 36px;
   line-height: 60px;
   font-family: @font-regular;
@@ -17,11 +14,9 @@
 }
 
 .guide__list {
-  margin: 0;
-  margin-left: 80px;
-  padding: 0;
+  .reset-list();
 
-  list-style: none;
+  margin-left: 80px;
 }
 
 .guide__item {
@@ -49,18 +44,18 @@
   }
 
   &--natural::after {
-    background-image: url("../../img/advantage-leaf@1x.png");
+    background-image: url("../img/advantage-leaf@1x.png");
   }
 
   &--powder::after {
-    background-image: url("../../img/advantage-powder@1x.png");
+    background-image: url("../img/advantage-powder@1x.png");
   }
 
   &--mealtime::after {
-    background-image: url("../../img/advantage-dining@1x.png");
+    background-image: url("../img/advantage-dining@1x.png");
   }
 
   &--weight::after {
-    background-image: url("../../img/advantage-clock@1x.png");
+    background-image: url("../img/advantage-clock@1x.png");
   }
 }

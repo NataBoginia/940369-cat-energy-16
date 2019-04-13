@@ -2,12 +2,16 @@
   display: flex;
   flex-direction: column;
 
-  padding: 35px 0;
-
   text-align: center;
 
   background-color: @color-bg-sub;
   border: 1px dashed #000000;
+}
+
+.page-footer__map {
+  &--main {
+    background-color: @color-bg-main;
+  }
 }
 
 .page-footer__container {
@@ -19,11 +23,12 @@
 }
 
 .page-footer__social-list {
+  .reset-list();
+
   display: flex;
   margin: 0 auto;
   padding: 12px 0;
 
-  list-style: none;
   border-top: 1px solid @color-border-main;
   border-bottom: 1px solid @color-border-main;
 }
@@ -58,19 +63,19 @@
   &--vk {
     margin-right: 14px;
 
-    background-image: url("../../img/icon-vk-mobile.svg");
+    background-image: url("../img/icon-vk-mobile.svg");
     background-size: 22px 12px;
   }
 
   &--insta {
     margin-right: 14px;
 
-    background-image: url("../../img/icon-insta-mobile.svg");
+    background-image: url("../img/icon-insta-mobile.svg");
     background-size: 17px 17px;
   }
 
   &--fb {
-    background-image: url("../../img/icon-fb-mobile.svg");
+    background-image: url("../img/icon-fb-mobile.svg");
     background-size: 10px 19px;
   }
 }
