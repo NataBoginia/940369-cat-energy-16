@@ -1,4 +1,6 @@
 .guide {
+  margin-bottom: 20px;
+
   border: 1px dashed red;
 }
 
@@ -61,6 +63,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .guide {
+    margin-bottom: 0;
+  }
+
   .guide__list {
     display: flex;
     justify-content: space-between;
@@ -69,21 +75,38 @@
   }
 
   .guide__title {
+    margin-bottom: 70px;
+
     font-size: 60px;
     line-height: 60px;
   }
 
   .guide__item {
     box-sizing: border-box;
-    width: 330px;
+    width: 260px;
+    margin-right: 65px;
+    margin-bottom: 75px;
     padding-top: 110px;
-    padding-right: 70px;
+    padding-right: 10px;
+    padding-bottom: 60px;
 
     font-size: 16px;
     line-height: 24px;
+
+    &::after {
+      left: 0;
+
+      width: 80px;
+      height: 80px;
+    }
   }
 }
 
-// @media (min-width: @desktop-width) {
-//
-// }
+@media (min-width: @desktop-width) {
+  .guide__item {
+    width: 245px;
+    margin-right: 0;
+    margin-bottom: 50px;
+    padding-right: 0;
+  }
+}

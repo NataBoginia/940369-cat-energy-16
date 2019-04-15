@@ -33,28 +33,28 @@
     <main class="page-main">
       <h1 class="page-main__title page-container">Каталог продукции</h1>
 
-      <section class="main-catalog">
+      <section class="main-catalog page-container">
         <h2 class="visually-hidden">Основной каталог функционального питания</h2>
         <ul class="main-catalog__list">
           <li class="main-catalog__item food-card">
-            <div class="food-card__container">
+            <div class="food-card__container food-card__container--outer">
               <a class="food-card__link" href="#">
                 <img class="food-card__img" src="img/chicken-small-mobile@1x.jpg" alt="Упаковка корма Cat Energy Pro Курица 500 граммов" width="140" height="144">
               </a>
-              <div class="food-card__container food-card__container--column">
+              <div class="food-card__container food-card__container--inner">
                 <a class="food-card__link" href="#">
                   <h3 class="food-card__title">Cat Energy Pro 500 г</h3>
                 </a>
                 <table class="food-card__table">
-                  <tr>
+                  <tr class="food-card__parameter">
                     <td class="food-card__parameter-name">Объем</td>
                     <td class="food-card__parameter-value">500 г</td>
                   </tr>
-                  <tr>
+                  <tr class="food-card__parameter">
                     <td class="food-card__parameter-name">Вкус</td>
                     <td class="food-card__parameter-value">Курица</td>
                   </tr>
-                  <tr>
+                  <tr class="food-card__parameter">
                     <td class="food-card__parameter-name">Цена</td>
                     <td class="food-card__parameter-value">700 Р.</td>
                   </tr>
@@ -65,11 +65,11 @@
           </li>
 
           <li class="main-catalog__item food-card">
-            <div class="food-card__container">
+            <div class="food-card__container  food-card__container--outer">
               <a class="food-card__link" href="#">
                 <img class="food-card__img" src="img/chicken-big-mobile@1x.jpg" alt="Упаковка корма Cat Energy Pro Курица 1000 граммов" width="140" height="144">
               </a>
-              <div class="food-card__container food-card__container--column">
+              <div class="food-card__container food-card__container--inner">
                 <a class="food-card__link" href="#">
                   <h3 class="food-card__title">Cat Energy Pro 1000 г</h3>
                 </a>
@@ -93,11 +93,11 @@
           </li>
 
           <li class="main-catalog__item food-card">
-            <div class="food-card__container">
+            <div class="food-card__container  food-card__container--outer">
               <a class="food-card__link" href="#">
                 <img class="food-card__img" src="img/fish-small-mobile@1x.jpg" alt="Упаковка корма Cat Energy Pro Рыба 500 граммов" width="140" height="144">
               </a>
-              <div class="food-card__container food-card__container--column">
+              <div class="food-card__container food-card__container--inner">
                 <a class="food-card__link" href="#">
                   <h3 class="food-card__title">Cat Energy Pro 500 г</h3>
                 </a>
@@ -121,11 +121,11 @@
           </li>
 
           <li class="main-catalog__item food-card">
-            <div class="food-card__container">
+            <div class="food-card__container  food-card__container--outer">
               <a class="food-card__link" href="#">
                 <img class="food-card__img" src="img/fish-big-mobile@1x.jpg" alt="Упаковка корма Cat Energy Pro Рыба 1000 граммов" width="140" height="144">
               </a>
-              <div class="food-card__container food-card__container--column">
+              <div class="food-card__container food-card__container--inner">
                 <a class="food-card__link" href="#">
                   <h3 class="food-card__title">Cat Energy Pro 1000 г</h3>
                 </a>
@@ -149,11 +149,11 @@
           </li>
 
           <li class="main-catalog__item food-card">
-            <div class="food-card__container">
+            <div class="food-card__container  food-card__container--outer">
               <a class="food-card__link" href="#">
                 <img class="food-card__img" src="img/buckwheat-small-mobile@1x.jpg" alt="Упаковка корма Cat Energy Slim Гречка 500 граммов" width="140" height="144">
               </a>
-              <div class="food-card__container food-card__container--column">
+              <div class="food-card__container food-card__container--inner">
                 <a class="food-card__link" href="#">
                   <h3 class="food-card__title">Cat Energy Slim 500 г</h3>
                 </a>
@@ -177,11 +177,11 @@
           </li>
 
           <li class="main-catalog__item food-card">
-            <div class="food-card__container">
+            <div class="food-card__container  food-card__container--outer">
               <a class="food-card__link" href="#">
                 <img class="food-card__img" src="img/buckwheat-big-mobile@1x.jpg" alt="Упаковка корма Cat Energy Slim Гречка 1000 граммов" width="140" height="144">
               </a>
-              <div class="food-card__container food-card__container--column">
+              <div class="food-card__container food-card__container--inner">
                 <a class="food-card__link" href="#">
                   <h3 class="food-card__title">Cat Energy Slim 1000 г</h3>
                 </a>
@@ -205,11 +205,11 @@
           </li>
 
           <li class="main-catalog__item food-card">
-            <div class="food-card__container">
+            <div class="food-card__container  food-card__container--outer">
               <a class="food-card__link" href="#">
                 <img class="food-card__img" src="img/rice-small-mobile@1x.jpg" alt="Упаковка корма Cat Energy Slim Рис 500 граммов" width="140" height="144">
               </a>
-              <div class="food-card__container food-card__container--column">
+              <div class="food-card__container food-card__container--inner">
                 <a class="food-card__link" href="#">
                   <h3 class="food-card__title">Cat Energy Slim 500 г</h3>
                 </a>
@@ -242,61 +242,71 @@
 
       <section class="extra-catalog page-container">
         <h2 class="extra-catalog__title">Дополнительные товары</h2>
-        <ul class="extra-catalog__list">
-          <li class="extra-catalog__item food-card food-card--extra">
-            <a class="food-card__link" href="#">
-              <h3 class="food-card__title food-card__title--extra">Сахарозаменитель</h3>
-            </a>
-            <table class="food-card__table food-card__table--extra">
-              <tr>
-                <td class="food-card__parameter-name food-card__parameter-name--extra">1 упаковка (100 г)</td>
-                <td class="food-card__parameter-value food-card__parameter-value--extra">200 Р.</td>
-              </tr>
-            </table>
-            <a class="food-card__btn button" href="#">Заказать</a>
-          </li>
+        <div class="extra-catalog__container">
+          <ul class="extra-catalog__list">
+            <li class="extra-catalog__item food-card food-card--extra">
+              <div class="food-card__container food-card__container--extra">
+                <a class="food-card__link" href="#">
+                  <h3 class="food-card__title food-card__title--extra">Сахарозаменитель</h3>
+                </a>
+                <table class="food-card__table food-card__table--extra">
+                  <tr>
+                    <td class="food-card__parameter-name food-card__parameter-name--extra">1 упаковка (100 г)</td>
+                    <td class="food-card__parameter-value food-card__parameter-value--extra">200 Р.</td>
+                  </tr>
+                </table>
+              </div>
+              <a class="food-card__btn food-card__btn--extra button" href="#">Заказать</a>
+            </li>
 
-          <li class="extra-catalog__item food-card food-card--extra">
-            <a class="food-card__link" href="#">
-              <h3 class="food-card__title food-card__title--extra">Питьевая вода</h3>
-            </a>
-            <table class="food-card__table food-card__table--extra">
-              <tr>
-                <td class="food-card__parameter-name food-card__parameter-name--extra">5 литров</td>
-                <td class="food-card__parameter-value food-card__parameter-value--extra">50 Р.</td>
-              </tr>
-            </table>
-            <a class="food-card__btn button" href="#">Заказать</a>
-          </li>
+            <li class="extra-catalog__item food-card food-card--extra">
+              <div class="food-card__container food-card__container--extra">
+                <a class="food-card__link" href="#">
+                  <h3 class="food-card__title food-card__title--extra">Питьевая вода</h3>
+                </a>
+                <table class="food-card__table food-card__table--extra">
+                  <tr>
+                    <td class="food-card__parameter-name food-card__parameter-name--extra">5 литров</td>
+                    <td class="food-card__parameter-value food-card__parameter-value--extra">50 Р.</td>
+                  </tr>
+                </table>
+              </div>
+              <a class="food-card__btn food-card__btn--extra button" href="#">Заказать</a>
+            </li>
 
-          <li class="extra-catalog__item food-card food-card--extra">
-            <a class="food-card__link" href="#">
-              <h3 class="food-card__title food-card__title--extra">Молоко</h3>
-            </a>
-            <table class="food-card__table food-card__table--extra">
-              <tr>
-                <td class="food-card__parameter-name food-card__parameter-name--extra">1 литр</td>
-                <td class="food-card__parameter-value food-card__parameter-value--extra">100 Р.</td>
-              </tr>
-            </table>
-            <a class="food-card__btn button" href="#">Заказать</a>
-          </li>
+            <li class="extra-catalog__item food-card food-card--extra">
+              <div class="food-card__container food-card__container--extra">
+                <a class="food-card__link" href="#">
+                  <h3 class="food-card__title food-card__title--extra">Молоко</h3>
+                </a>
+                <table class="food-card__table food-card__table--extra">
+                  <tr>
+                    <td class="food-card__parameter-name food-card__parameter-name--extra">1 литр</td>
+                    <td class="food-card__parameter-value food-card__parameter-value--extra">100 Р.</td>
+                  </tr>
+                </table>
+              </div>
+              <a class="food-card__btn food-card__btn--extra button" href="#">Заказать</a>
+            </li>
 
-          <li class="extra-catalog__item food-card food-card--extra">
-            <a class="food-card__link" href="#">
-              <h3 class="food-card__title food-card__title--extra">Витамины</h3>
-            </a>
-            <table class="food-card__table food-card__table--extra">
-              <tr>
-                <td class="food-card__parameter-name food-card__parameter-name--extra">1 упаковка (30 г)</td>
-                <td class="food-card__parameter-value food-card__parameter-value--extra">300 Р.</td>
-              </tr>
-            </table>
-            <a class="food-card__btn button" href="#">Заказать</a>
-          </li>
-        </ul>
-        <div class="extra-catalog__gift">
-          <p class="extra-catalog__gift-text">Закажите все и получите чехол для кота в подарок!</p>
+            <li class="extra-catalog__item food-card food-card--extra">
+              <div class="food-card__container food-card__container--extra">
+                <a class="food-card__link" href="#">
+                  <h3 class="food-card__title food-card__title--extra">Витамины</h3>
+                </a>
+                <table class="food-card__table food-card__table--extra">
+                  <tr>
+                    <td class="food-card__parameter-name food-card__parameter-name--extra">1 упаковка (30 г)</td>
+                    <td class="food-card__parameter-value food-card__parameter-value--extra">300 Р.</td>
+                  </tr>
+                </table>
+              </div>
+              <a class="food-card__btn food-card__btn--extra button" href="#">Заказать</a>
+            </li>
+          </ul>
+          <div class="extra-catalog__gift">
+            <p class="extra-catalog__gift-text">Закажите все и получите чехол для кота в подарок!</p>
+          </div>
         </div>
       </section>
     </main>

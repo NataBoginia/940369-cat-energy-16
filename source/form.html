@@ -37,9 +37,9 @@
         <h2 class="visually-hidden">Анкета для подбора программы питания</h2>
         <p class="page-main__request-desc">Заполните анкету и мы подберем программу питания для вашего кота</p>
         <form class="page-main__program-form form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="form__part">
+          <fieldset class="form__part form__part--columns">
             <legend class="visually-hidden">Данные кота</legend>
-            <ul class="form__list">
+            <ul class="form__list form__list--column">
               <li class="form__input-wrapper">
                 <label class="form__label form__label--text" for="first-name">Имя:*</label>
                 <input class="form__input form__input--text" id="first-name" name="first-name" type="text" placeholder="Барсик">
@@ -92,7 +92,7 @@
 
           <fieldset class="form__part">
             <legend class="form__title">Дополнительно</legend>
-            <ul class="form__list">
+            <ul class="form__list form__list--options">
               <li class="form__input-wrapper form__input-wrapper--options">
                 <input class="visually-hidden form__input form__input--checkbox" id="sweetener" name="sweetener" type="checkbox" checked>
                 <label class="form__label form__label--icon form__label--checkbox" for="sweetener">Сахарозаменитель</label>
@@ -112,8 +112,10 @@
             </ul>
           </fieldset>
 
-          <button class="form__btn button" type="submit">Отправить заявку</button>
-          <span class="form__note">* &mdash; Обязательные поля</span>
+          <div class="form__input-wrapper">
+            <button class="form__btn button" type="submit">Отправить заявку</button>
+            <span class="form__note">* &mdash; Обязательные поля</span>
+          </div>
         </form>
       </section>
     </main>

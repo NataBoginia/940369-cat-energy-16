@@ -84,6 +84,7 @@
 }
 
 .form__input {
+  box-sizing: border-box;
   width: 100%;
   min-width: 50px;
   padding: 12px;
@@ -107,7 +108,6 @@
   }
 
   &--text-area {
-    width: auto;
     margin-bottom: 25px;
 
     resize: none;
@@ -255,3 +255,28 @@
     border-radius: 50%;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .form__list {
+    &--options {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+
+  .form__input-wrapper {
+    &--options {
+      width: 250px;
+    }
+  }
+
+  .form__btn {
+    width: 280px;
+    margin-right: 20px;
+  }
+}
+
+// @media (min-width: @desktop-width) {
+//
+// }

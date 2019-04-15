@@ -25,3 +25,52 @@
   text-transform: uppercase;
   color: @color-title;
 }
+
+@media (min-width: @tablet-width) {
+  .page-main__program-request {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .page-main__title {
+    margin-top: 50px;
+
+    font-size: 60px;
+  }
+
+  .page-main__request-desc {
+    margin: 30px 280px 60px 0;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__title {
+    margin-top: 65px;
+  }
+
+  .page-main__program-request {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .form__part {
+    &--columns {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .form__list {
+    &--column {
+      width: 500px;
+    }
+
+    &--bordered {
+      width: 500px;
+    }
+  }
+}

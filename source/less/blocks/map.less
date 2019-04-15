@@ -13,6 +13,8 @@
 }
 
 .map__title {
+  width: 125px;
+
   font-size: 16px;
   line-height: 20px;
   font-family: @font-regular;
@@ -23,6 +25,8 @@
 }
 
 .map__address {
+  width: 135px;
+
   font-size: 14px;
   line-height: 20px;
   font-family: @font-add;
@@ -49,10 +53,29 @@
   .map__address {
     width: 160px;
 
+    font-size: 16px;
     text-align: right;
   }
 }
 
-// @media (min-width: @desktop-width) {
-//
-// }
+@media (min-width: @desktop-width) {
+  .map {
+    position: relative;
+  }
+
+  .map__desc {
+    position: absolute;
+    top: 90px;
+    left: @desktop-padding;
+
+    width: 410px;
+    margin: 0;
+    padding: 60px 80px 60px 80px;
+
+    background-color: @color-bg-main;
+  }
+
+  .map__address {
+    text-align: left;
+  }
+}
