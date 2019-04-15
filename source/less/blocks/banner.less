@@ -20,7 +20,6 @@
 
   font-size: 36px;
   line-height: 36px;
-  text-align: center;
 }
 
 .banner__text {
@@ -29,7 +28,6 @@
 
   font-size: 14px;
   line-height: 14px;
-  text-align: center;
   text-transform: uppercase;
 }
 
@@ -41,3 +39,50 @@
   font-size: 14px;
   line-height: 18px;
 }
+
+@media (min-width: @tablet-width) {
+  .banner {
+    margin-bottom: 0;
+    padding-left: 90px + @tablet-padding;
+
+    text-align: left;
+    color: @color-title;
+
+    background-image: none;
+    background-color: @color-bg-main;
+  }
+
+  .banner__title {
+    width: 430px;
+    margin-top: 48px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .banner__text {
+    margin-top: 43px;
+    margin-bottom: 48px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .banner__img {
+    width: 709px;
+  }
+
+  .banner__btn {
+    width: auto;
+    margin-right: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+// @media (min-width: @desktop-width) {
+//
+// }
