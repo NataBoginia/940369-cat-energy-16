@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   padding-top: 15px;
-  padding-bottom: 30px;
 
   font-family: @font-regular;
   color: @color-title;
@@ -82,7 +81,15 @@
   text-align: center;
 }
 
+.example-slider {
+  padding-bottom: 30px;
+}
+
 @media (min-width: @tablet-width) {
+  .example {
+    background-color: @color-bg-main;
+  }
+
   .example__title {
     margin-bottom: 60px;
 
@@ -109,13 +116,17 @@
     font-size: 16px;
     line-height: 24px;
   }
+
+  .example__slider {
+    background-color: @color-bg-sub;
+  }
+
+  .example__parameter-name {
+    background-color: @color-bg-main;
+  }
 }
 
 @media (min-width: @desktop-width) {
-  .example {
-    background-color: @color-bg-main;
-  }
-
   .example__wrapper {
     &--outer {
       flex-direction: row;
@@ -128,6 +139,7 @@
       justify-content: flex-start;
       width: 430px;
       padding-top: 70px;
+      padding-bottom: 45px;
     }
   }
 
@@ -139,7 +151,13 @@
     margin-bottom: 70px;
   }
 
+  .example__parameter-name {
+    background-color: @color-bg-sub;
+  }
+
   .example__slider {
     margin-top: -200px;
+
+    background-color: transparent;
   }
 }
