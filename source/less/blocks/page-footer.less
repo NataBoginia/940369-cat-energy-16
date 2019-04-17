@@ -1,6 +1,7 @@
 .page-footer {
   display: flex;
   flex-direction: column;
+  padding-bottom: 20px;
 
   text-align: center;
 
@@ -9,25 +10,26 @@
 }
 
 .page-footer__map {
+  margin-bottom: 40px;
+
   &--main {
     background-color: @color-bg-main;
   }
 }
 
-.page-footer__container {
-  padding: 0 20px;
-}
-
 .page-footer__logo {
-  margin-bottom: 25px;
+  display: block;
 }
 
 .page-footer__social-list {
   .reset-list();
 
   display: flex;
-  margin: 0 auto;
-  padding: 12px 0;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 18px;
+  padding-top: 13px;
+  padding-bottom: 10px;
 
   border-top: 1px solid @color-border-main;
   border-bottom: 1px solid @color-border-main;
@@ -35,7 +37,6 @@
 
 .page-footer__author {
   display: flex;
-  margin-top: 20px;
 
   font-size: 16px;
   line-height: 16px;
@@ -50,6 +51,7 @@
 
 .page-footer__author-img {
   margin-left: auto;
+  height: 40px;
 }
 
 .page-footer__social-link {
@@ -68,8 +70,6 @@
   }
 
   &--insta {
-    margin-right: 14px;
-
     background-image: url("../img/icon-insta-mobile.svg");
     background-size: 17px 17px;
   }
@@ -79,3 +79,39 @@
     background-size: 10px 19px;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    padding-bottom: 55px;
+  }
+
+  .page-footer__map {
+    margin-bottom: 55px;
+  }
+
+  .page-footer__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-footer__logo {
+    width: 128px;
+  }
+
+  .page-footer__social-list {
+    width: 150px;
+    margin: 0;
+    padding: 0;
+
+    border: none;
+  }
+
+  .page-footer__author {
+    width: 192px;
+  }
+}
+
+// @media (min-width: @desktop-width) {
+//
+// }

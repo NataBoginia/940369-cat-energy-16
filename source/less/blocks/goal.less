@@ -5,7 +5,7 @@
   flex-direction: column;
 
   margin-bottom: 17px;
-  padding: 29px 20px 8px 20px;
+  padding: 29px 18px 8px 18px;
 
   color: @color-text-sub;
 
@@ -68,7 +68,7 @@
 
 .goal__text {
   margin: 0;
-  padding-bottom: 23px;
+  margin-bottom: 23px;
 
   font-size: 14px;
   line-height: 18px;
@@ -105,5 +105,104 @@
 
   &:active {
     color: fade(@color-text-sub, 30%);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .goal {
+    margin-bottom: 30px;
+    padding: 75px 312px 47px 50px;
+
+    &::before {
+      top: 50%;
+      left: 100%;
+
+      width: 200px;
+      height: 200px;
+
+      transform: translateY(-50%) translateX(-200px - 60);
+    }
+
+    &::after {
+      top: 50%;
+      left: 100%;
+
+      width: 300px;
+      height: 200px;
+
+      background-position: center;
+      transform: translateY(-50%) translateX(-300px);
+    }
+
+    &--slim::after {
+      background-size: 141px 194px;
+    }
+
+    &--pro::after {
+      background-size: 268px 113px;
+    }
+  }
+
+  .goal__title {
+    margin-bottom: 42px;
+    margin-left: 0;
+
+    font-size: 36px;
+  }
+
+  .goal__text {
+    margin-bottom: 19px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .goal__link {
+    padding-right: 50px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .goal {
+    max-width: 470px;
+    margin-bottom: 0;
+    padding: 75px 50px 45px 50px;
+
+    &::before {
+      top: 0;
+      left: 0;
+
+      width: 100px;
+      height: 100px;
+
+      transform: translateY(50%) translateX(50%);
+    }
+
+    &::after {
+      top: 0;
+      left: 0;
+
+      width: 140px;
+      height: 97px;
+
+      background-position: center;
+      transform: translateY(50%) translateX(50%);
+    }
+
+    &--slim::after {
+      background-size: 71px 97px;
+    }
+
+    &--pro::after {
+      background-size: 134px 57px;
+    }
+  }
+
+  .goal__title {
+    margin-bottom: 70px;
+    margin-left: 160px;
   }
 }

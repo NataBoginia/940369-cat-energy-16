@@ -16,7 +16,8 @@
   margin-bottom: 25px;
 
   &--bordered {
-    margin: 0 -20px;
+    margin-left: -20px;
+    margin-right: -20px;
     padding: 25px 20px;
 
     border: 1px solid @color-border-main;
@@ -46,7 +47,7 @@
 
     flex-grow: 1;
     margin-left: 22px;
-    margin-right: -20px;
+    margin-right: -@mobile-padding;
 
     min-width: 99px;
     height: 3px;
@@ -85,6 +86,7 @@
 }
 
 .form__input {
+  box-sizing: border-box;
   width: 100%;
   min-width: 50px;
   padding: 12px;
@@ -108,7 +110,6 @@
   }
 
   &--text-area {
-    width: auto;
     margin-bottom: 25px;
 
     resize: none;
@@ -183,7 +184,7 @@
   &:disabled {
     & + .form__label--icon::before,
     & + .form__label--icon {
-      border-color: @color-border-hover;
+      border-color: @color-text-main;
       opacity: 0.3;
     }
   }
@@ -254,5 +255,96 @@
 
   &--radio::before {
     border-radius: 50%;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .form__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .form__list {
+    &--bordered {
+      margin-left: 0;
+      margin-right: 0;
+      padding: 25px 30px;
+
+      border: 1px solid @color-border-main;
+    }
+  }
+
+  .form__input-wrapper {
+    &--row {
+      width: 250px;
+    }
+  }
+
+  .form__input {
+    &--text-area {
+      line-height: 30px;
+    }
+  }
+
+  .form__btn {
+    width: 280px;
+    margin-right: 20px;
+  }
+
+  .form__note {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .form__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &--btn {
+      justify-content: flex-start;
+    }
+
+    &--columns {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    &--contact {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__list {
+    &--column {
+      box-sizing: border-box;
+      width: 570px;
+    }
+  }
+
+  .form__input-wrapper {
+    &--row {
+      width: 200px;
+    }
+  }
+
+  .form__wrapper {
+    &--columns {
+      flex-direction: row;
+    }
+
+    &--contact {
+      flex-direction: row;
+    }
   }
 }

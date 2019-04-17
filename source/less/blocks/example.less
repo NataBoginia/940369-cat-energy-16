@@ -1,9 +1,7 @@
 .example {
   display: flex;
   flex-direction: column;
-  margin: 0 -20px;
-  margin-bottom: 10px;
-  padding: 15px 20px;
+  padding-top: 15px;
 
   font-family: @font-regular;
   color: @color-title;
@@ -36,7 +34,7 @@
 
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 
 .example__parameter {
@@ -80,4 +78,86 @@
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
+}
+
+.example-slider {
+  padding-bottom: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    background-color: @color-bg-main;
+  }
+
+  .example__title {
+    margin-bottom: 60px;
+
+    font-size: 60px;
+  }
+
+  .example__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &--outer {
+      flex-direction: column;
+    }
+  }
+
+  .example__parameter {
+    margin-right: 42px;
+  }
+
+  .example__text {
+    width: 100%;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .example__slider {
+    background-color: @color-bg-sub;
+  }
+
+  .example__parameter-name {
+    background-color: @color-bg-main;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__wrapper {
+    &--outer {
+      flex-direction: row;
+
+      background-color: @color-bg-sub;
+    }
+
+    &--inner {
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 430px;
+      padding-top: 70px;
+      padding-bottom: 45px;
+    }
+  }
+
+  .example__title {
+    margin-bottom: 75px;
+  }
+
+  .example__text {
+    margin-bottom: 70px;
+  }
+
+  .example__parameter-name {
+    background-color: @color-bg-sub;
+  }
+
+  .example__slider {
+    margin-top: -200px;
+
+    background-color: transparent;
+  }
 }

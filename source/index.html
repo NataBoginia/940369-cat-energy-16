@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <nav class="page-header__menu main-menu">
+      <nav class="page-header__menu main-menu page-container">
         <div class="main-menu__wrapper">
           <a class="main-menu__logo">
             <img class="main-menu__logo-img" src="img/logo-mobile.svg" alt="Логотип компании Кэт энерджи" width="191" height="39">
@@ -18,13 +19,13 @@
         </div>
         <ul class="main-menu__list">
           <li class="main-menu__item">
-            <a class="main-menu__link main-menu__link--active">Главная</a>
+            <a class="main-menu__link main-menu__link--index main-menu__link--active">Главная</a>
             </li>
           <li class="main-menu__item">
-            <a class="main-menu__link" href="catalog.html">Каталог продукции</a>
+            <a class="main-menu__link main-menu__link--index " href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-menu__item">
-            <a class="main-menu__link" href="form.html">Подбор программы</a>
+            <a class="main-menu__link main-menu__link--index " href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -34,13 +35,15 @@
       <h1 class="visually-hidden">Интернет-магазин функционального питания для котов Кэт энерджи</h1>
 
       <section class="banner">
-        <h2 class="banner__title">Функциональное питание для котов</h2>
-        <p class="banner__text">Занялся собой? Займись котом!</p>
-        <img class="banner__img" src="img/index-can-mobile@1x.png" alt="Упаковка питания для котов Кэт энерджи" width="280" height="270">
-        <a class="banner__btn button" href="form.html">Подобрать программу</a>
+        <div class="banner__container page-container">
+          <h2 class="banner__title">Функциональное питание для котов</h2>
+          <p class="banner__text">Занялся собой? Займись котом!</p>
+          <img class="banner__img" src="img/index-can-mobile@1x.png" alt="Упаковка питания для котов Кэт энерджи" width="280" height="270">
+          <a class="banner__btn button" href="form.html">Подобрать программу</a>
+        </div>
       </section>
 
-      <section class="goals">
+      <section class="goals page-container">
         <h2 class="visually-hidden">Цели, достижимые с функциональным питанием</h2>
         <section class="goal goal--slim">
           <h3 class="goal__title">Похудение</h3>
@@ -58,7 +61,7 @@
         </section>
       </section>
 
-      <section class="guide">
+      <section class="guide page-container">
         <h2 class="guide__title">Как это работает</h2>
         <ul class="guide__list">
           <li class="guide__item guide__item--natural">
@@ -77,40 +80,45 @@
       </section>
 
       <section class="example">
-        <h2 class="example__title">Живой пример</h2>
-        <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив
-        свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих
-        тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <ul class="example__list">
-          <li class="example__parameter">
-            <b class="example__parameter-value">5 кг</b>
-            <span class="example__parameter-name">снижение веса</span>
-          </li>
-          <li class="example__parameter">
-            <b class="example__parameter-value">60 дней</b>
-            <span class="example__parameter-name">затрачено времени</span>
-          </li>
-        </ul>
-        <p class="example__cost">Затраты на питание: 15 000 руб.</p>
-        <div class="example__slider slider">
-          <div class="slider__img-container">
-            <img class="slider__img slider__img--before" src="img/before-mobile@1x.png" alt="Кот Борис до начала питания кормом Cat Energy Slim" width="320" height="240">
-            <img class="visually-hidden slider__img slider__img--after" src="img/after-mobile@1x.png" alt="Кот Борис после двух месяцев питания кормом Cat Energy Slim" width="320" height="240">
+        <h2 class="example__title page-container">Живой пример</h2>
+
+        <div class="example__wrapper example__wrapper--outer page-container">
+          <div class="example__wrapper example__wrapper--inner">
+            <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив
+            свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих
+            тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <ul class="example__list">
+              <li class="example__parameter">
+                <b class="example__parameter-value">5 кг</b>
+                <span class="example__parameter-name">снижение веса</span>
+              </li>
+              <li class="example__parameter">
+                <b class="example__parameter-value">60 дней</b>
+                <span class="example__parameter-name">затрачено времени</span>
+              </li>
+            </ul>
+            <p class="example__cost">Затраты на питание: 15 000 руб.</p>
           </div>
-          <div class="slider__controls">
-            <button class="slider__btn slider__btn--before" type="button">Было</button>
-            <input class="slider__range" type="range" id="slider-range" value="0" min="0" max="100">
-            <label class="visually-hidden" for="slider-range">Сдвинуть маркер, чтобы проследить прогресс кота Бориса</label>
-            <button class="slider__btn slider__btn--after" type="button">Стало</button>
+          <div class="example__slider slider">
+            <div class="slider__img-container">
+              <img class="slider__img slider__img--before" src="img/before-mobile@1x.png" alt="Кот Борис до начала питания кормом Cat Energy Slim" width="320" height="240">
+              <img class="visually-hidden slider__img slider__img--after" src="img/after-mobile@1x.png" alt="Кот Борис после двух месяцев питания кормом Cat Energy Slim" width="320" height="240">
+            </div>
+            <div class="slider__controls">
+              <button class="slider__btn slider__btn--before" type="button">Было</button>
+              <input class="slider__range" type="range" id="slider-range" value="0" min="0" max="100">
+              <label class="visually-hidden" for="slider-range">Сдвинуть маркер, чтобы проследить прогресс кота Бориса</label>
+              <button class="slider__btn slider__btn--after" type="button">Стало</button>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="page-footer">
-      <section class="page-footer__map--main map">
+      <section class="page-footer__map page-footer__map--main map">
         <h2 class="visually-hidden">Расположение офиса компании Кэт энерджи</h2>
-        <div class="map__desc">
+        <div class="map__desc page-container">
           <b class="map__title">Приглашаем к сотрудничеству дилеров!</b>
           <address class="map__address">
             ул. Большая Конюшенная, д. 19/8<br>
@@ -120,7 +128,7 @@
         <iframe class="map__scheme" src="https://yandex.ru/map-widget/v1/-/CCB2JK0x" width="320" height="400"></iframe>
       </section>
 
-      <div class="page-footer__container">
+      <div class="page-footer__info page-container">
         <a class="page-footer__logo">
           <img class="page-footer__logo-img" src="img/logo-footer.svg" alt="Логотип компании Кэт энерджи" width="128" height="24">
         </a>

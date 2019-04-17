@@ -1,7 +1,6 @@
 .button {
   display: block;
   box-sizing: border-box;
-  margin: 0 auto;
   padding: 9px 10px 11px 10px;
   width: 100%;
 
@@ -24,3 +23,13 @@
     color: fade(@color-bg-main, 70%);
   }
 }
+
+@media (min-width: @tablet-width) {
+  .button {
+    padding: 10px 20px 10px 20px;
+  }
+}
+
+// @media (min-width: @desktop-width) {
+//
+// }
