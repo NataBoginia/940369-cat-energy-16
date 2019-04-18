@@ -8,18 +8,18 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="page-header__menu main-menu page-container">
+      <nav class="page-header__menu main-menu">
         <div class="main-menu__wrapper">
           <a class="main-menu__logo">
             <img class="main-menu__logo-img" src="img/logo-mobile.svg" alt="Логотип компании Кэт энерджи" width="191" height="39">
           </a>
-          <button class="main-menu__toggle" type="button">
+          <button class="main-menu__toggle main-menu__toggle--opened" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
         </div>
         <ul class="main-menu__list">
           <li class="main-menu__item">
-            <a class="main-menu__link main-menu__link--index main-menu__link--active">Главная</a>
+            <a class="main-menu__link main-menu__link--index main-menu__link--current">Главная</a>
             </li>
           <li class="main-menu__item">
             <a class="main-menu__link main-menu__link--index " href="catalog.html">Каталог продукции</a>
@@ -34,7 +34,7 @@
     <main class="page-main">
       <h1 class="visually-hidden">Интернет-магазин функционального питания для котов Кэт энерджи</h1>
 
-      <section class="banner">
+      <section class="page-main__banner banner">
         <div class="banner__container page-container">
           <h2 class="banner__title">Функциональное питание для котов</h2>
           <p class="banner__text">Занялся собой? Займись котом!</p>
@@ -43,16 +43,16 @@
         </div>
       </section>
 
-      <section class="goals page-container">
+      <section class="page-main__goals goals page-container">
         <h2 class="visually-hidden">Цели, достижимые с функциональным питанием</h2>
-        <section class="goal goal--slim">
+        <section class="goals__item goal goal--slim">
           <h3 class="goal__title">Похудение</h3>
           <p class="goal__text">Ваш кот весит больше собаки и почти утратил
             способность лазить по деревьям? Пора на диету!
             Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <a class="goal__link" href="catalog.html">Каталог Slim</a>
         </section>
-        <section class="goal goal--pro">
+        <section class="goals__item goal goal--pro">
           <h3 class="goal__title">Набор массы</h3>
           <p class="goal__text">Заработать авторитет среди дворовых котов
           и даже собак? Серия Cat Energy Pro поможет вашему коту
@@ -61,7 +61,7 @@
         </section>
       </section>
 
-      <section class="guide page-container">
+      <section class="page-main__guide guide page-container">
         <h2 class="guide__title">Как это работает</h2>
         <ul class="guide__list">
           <li class="guide__item guide__item--natural">
@@ -79,7 +79,7 @@
         </ul>
       </section>
 
-      <section class="example">
+      <section class="page-main__example example">
         <h2 class="example__title page-container">Живой пример</h2>
 
         <div class="example__wrapper example__wrapper--outer page-container">
@@ -155,5 +155,6 @@
         </a>
       </div>
     </footer>
+    <script src="js/app.js"></script>
   </body>
 </html>
