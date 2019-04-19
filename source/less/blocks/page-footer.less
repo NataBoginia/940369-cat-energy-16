@@ -6,19 +6,24 @@
   text-align: center;
 
   background-color: @color-bg-sub;
-  border: 1px dashed #000000;
 }
 
 .page-footer__map {
-  margin-bottom: 40px;
-
-  &--main {
-    background-color: @color-bg-main;
-  }
+  margin-bottom: 35px;
 }
 
 .page-footer__logo {
   display: block;
+  margin-bottom: 25px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-footer__logo-img {
@@ -31,7 +36,6 @@
 
   display: flex;
   justify-content: center;
-  margin-top: 25px;
   margin-bottom: 18px;
   padding-top: 13px;
   padding-bottom: 10px;
@@ -67,22 +71,43 @@
 
   background-position: center;
   background-repeat: no-repeat;
+  //
+  // &--vk {
+  //   margin-right: 14px;
+  //
+  //   background-image: url("../img/icon-vk-mobile.svg");
+  //   background-size: 22px 12px;
+  // }
+  //
+  // &--insta {
+  //   background-image: url("../img/icon-insta-mobile.svg");
+  //   background-size: 17px 17px;
+  // }
+  //
+  // &--fb {
+  //   background-image: url("../img/icon-fb-mobile.svg");
+  //   background-size: 10px 19px;
+  // }
+}
 
-  &--vk {
-    margin-right: 14px;
-
-    background-image: url("../img/icon-vk-mobile.svg");
-    background-size: 22px 12px;
+.page-footer__social-img {
+  path {
+    fill: @color-text-main;
   }
 
-  &--insta {
-    background-image: url("../img/icon-insta-mobile.svg");
-    background-size: 17px 17px;
+  &:hover,
+  &:focus{
+    path,
+    circle {
+      fill: @color-accent;
+    }
   }
 
-  &--fb {
-    background-image: url("../img/icon-fb-mobile.svg");
-    background-size: 10px 19px;
+  &:active{
+    path,
+    circle {
+     opacity: 0.3;
+   }
   }
 }
 

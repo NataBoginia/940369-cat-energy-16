@@ -1,13 +1,15 @@
 .example {
-  display: flex;
-  flex-direction: column;
-  padding-top: 15px;
-
   font-family: @font-regular;
   color: @color-title;
 
   background-color: @color-bg-sub;
-  border: 1px dashed #000000;
+}
+
+.example__container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 18px;
+  padding-bottom: 25px;
 }
 
 .example__title {
@@ -22,6 +24,7 @@
 .example__text {
   margin: 0;
   margin-bottom: 24px;
+  padding-right: 14px;
 
   font-size: 14px;
   line-height: 18px;
@@ -60,8 +63,8 @@
 .example__parameter-name {
   display: block;
   margin-bottom: -16px;
-  margin-right: 19px;
-  margin-left: 19px;
+  padding-right: 20px;
+  padding-left: 20px;
 
   font-size: 12px;
   line-height: 12px;
@@ -73,6 +76,7 @@
 
 .example__cost {
   align-self: center;
+  margin-top: 0;
   margin-bottom: 35px;
 
   font-size: 14px;
@@ -96,16 +100,6 @@
     font-size: 60px;
   }
 
-  .example__wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    &--outer {
-      flex-direction: column;
-    }
-  }
-
   .example__parameter {
     margin-right: 42px;
   }
@@ -127,22 +121,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  .example__wrapper {
-    &--outer {
-      flex-direction: row;
-
-      background-color: @color-bg-sub;
-    }
-
-    &--inner {
-      flex-direction: column;
-      justify-content: flex-start;
-      width: 430px;
-      padding-top: 70px;
-      padding-bottom: 45px;
-    }
-  }
-
   .example__title {
     margin-bottom: 75px;
   }
