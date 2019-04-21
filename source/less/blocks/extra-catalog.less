@@ -1,9 +1,3 @@
-.extra-catalog {
-  margin: 20px auto;
-
-  border: 1px dashed #000000;
-}
-
 .extra-catalog__list {
   .reset-list();
 
@@ -13,12 +7,39 @@
 .extra-catalog__title {
   .reset-header();
 
+  position: relative;
+
+  display: inline-block;
   margin-bottom: 20px;
+  padding-right: 25px;
 
   font-size: 24px;
   line-height: 24px;
   font-family: @font-regular;
   color: @color-title;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 100%;
+
+    height: 3px;
+    width: 100%;
+    min-width: 20px;
+
+    background-color: @color-accent;
+    // transform: translateY(-50%);
+  }
+}
+
+.extra-catalog__item {
+  border-bottom: 1px solid @color-border-sub;
+
+  &:first-child {
+    border-top: 1px solid @color-border-sub;
+  }
 }
 
 .extra-catalog__gift {

@@ -2,19 +2,19 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 15px 0;
 
   background-color: @color-bg-main;
-  border-bottom: 1px solid @color-border-sub;
 
   &--more {
     position: relative;
+    padding-top: 80px;
   }
 
   &--more::before {
     content: "";
 
     position: absolute;
+    top: 25px;
 
     align-self: center;
 
@@ -23,20 +23,19 @@
 
     background-image: url("../img/icon-plus-mobile.svg");
     background-repeat: no-repeat;
-  }
-
-  &--extra {
-    padding-left: 0;
-    padding-right: 0;
+    opacity: 0.2;
   }
 }
 
 .food-card__container {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 
   &--inner {
     flex-direction: column;
+
+    padding-top: 15px;
+    padding-bottom: 10px;
   }
 
   &--extra {
@@ -45,12 +44,21 @@
 }
 
 .food-card__img {
+  display: block;
   width: 140px;
   height: 144px;
 }
 
+.food-card__link {
+  flex-shrink: 0;
+}
+
 .food-card__title {
   .reset-header();
+
+  min-width: 75px;
+  margin-right: 45px;
+  margin-bottom: 8px;
 
   font-size: 16px;
   line-height: 20px;
@@ -59,7 +67,7 @@
   color: @color-title;
 
   &--more {
-    margin-top: 52px;
+    margin-right: 0;
 
     text-align: center;
   }
@@ -71,6 +79,8 @@
 }
 
 .food-card__table {
+  width: 100%;
+
   font-size: 12px;
   line-height: 16px;
   font-family: @font-add;
@@ -83,14 +93,20 @@
 }
 
 .food-card__parameter-name {
+  padding: 0;
+
   text-align: left;
 }
 
 .food-card__parameter-value {
+  padding: 0;
+
   text-align: right;
 }
 
 .food-card__btn {
+  margin-bottom: 24px;
+
   &--more {
     color: @color-text-main;
 
@@ -108,6 +124,8 @@
 }
 
 .food-card__text {
+  margin: 0;
+  margin-bottom: 20px;
   padding: 0;
 
   font-size: 12px;

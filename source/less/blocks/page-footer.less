@@ -1,7 +1,6 @@
 .page-footer {
   display: flex;
   flex-direction: column;
-  padding-bottom: 20px;
 
   text-align: center;
 
@@ -36,78 +35,89 @@
 
   display: flex;
   justify-content: center;
-  margin-bottom: 18px;
-  padding-top: 13px;
+  margin-bottom: 12px;
+  padding-top: 23px;
   padding-bottom: 10px;
 
   border-top: 1px solid @color-border-main;
   border-bottom: 1px solid @color-border-main;
 }
 
-.page-footer__author {
-  display: flex;
-
-  font-size: 16px;
-  line-height: 16px;
-  font-family: @font-add;
-  text-align: left;
-  color: @color-text-main;
-}
-
-.page-footer__author-name {
-  padding-top: 12px;
-}
-
-.page-footer__author-img {
-  margin-left: auto;
-  width: 27px;
-  height: 34px;
-}
-
 .page-footer__social-link {
   display: block;
-  width: 40px;
-  height: 40px;
-
-  background-position: center;
-  background-repeat: no-repeat;
-  //
-  // &--vk {
-  //   margin-right: 14px;
-  //
-  //   background-image: url("../img/icon-vk-mobile.svg");
-  //   background-size: 22px 12px;
-  // }
-  //
-  // &--insta {
-  //   background-image: url("../img/icon-insta-mobile.svg");
-  //   background-size: 17px 17px;
-  // }
-  //
-  // &--fb {
-  //   background-image: url("../img/icon-fb-mobile.svg");
-  //   background-size: 10px 19px;
-  // }
+  width: 30px;
+  height: 30px;
+  padding-right: 15px;
+  padding-left: 10px;
 }
 
 .page-footer__social-img {
-  path {
+  &--vk {
+    width: 22px;
+    height: 12px;
+  }
+
+  &--insta {
+    width: 16px;
+    height: 16px;
+  }
+
+  &--fb {
+    width: 10px;
+    height: 19px;
+  }
+
+  path,
+  circle {
     fill: @color-text-main;
   }
 
   &:hover,
-  &:focus{
+  &:focus {
     path,
     circle {
       fill: @color-accent;
     }
   }
 
-  &:active{
+  &:active {
     path,
     circle {
-     opacity: 0.3;
-   }
+      opacity: 0.3;
+    }
+  }
+}
+
+.page-footer__author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+
+  font-size: 16px;
+  line-height: 16px;
+  font-family: @font-add;
+  text-align: left;
+  color: @color-text-main;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__author-img {
+  width: 40px;
+  height: 52px;
+
+  path {
+    fill: @color-text-main;
+  }
+
+  &:hover,
+  &:focus {
+    path {
+      fill: @color-accent;
+    }
   }
 }
 
