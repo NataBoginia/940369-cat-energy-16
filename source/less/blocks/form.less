@@ -13,28 +13,45 @@
 .form__list {
   .reset-list();
 
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 
   &--bordered {
     margin-left: -20px;
     margin-right: -20px;
-    padding: 25px 20px;
+    padding-top: 26px;
+    padding-right: 19px;
+    padding-bottom: 26px;
+    padding-left: 19px;
 
     border: 1px solid @color-border-main;
+  }
+
+  &--options {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
 .form__part {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
 
-  border: 1px dashed #000000;
+  border: none;
 }
 
 .form__title {
-  display: flex;
-  align-items: center;
-  width: 100%;
+  .reset-header();
+
+  position: relative;
+
+  display: inline-block;
+  margin-top: 28px;
   margin-bottom: 35px;
 
   font-size: 24px;
@@ -42,32 +59,38 @@
   text-transform: none;
   color: @color-title;
 
+  background-color: #ffffff;
+
   &::after {
     content: "";
 
-    flex-grow: 1;
-    margin-left: 22px;
-    margin-right: -@mobile-padding;
+    position: absolute;
+    top: 12px;
+    left: 100%;
 
-    min-width: 99px;
     height: 3px;
+    width: 100vw;
+    margin-left: 22px;
 
     background-color: @color-accent;
+    transform: translateY(50%);
   }
 }
 
+.form__btn {
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
 .form__note {
+  display: block;
+
   font-size: 14px;
   line-height: 15px;
   font-family: @font-add;
   text-align: center;
   text-transform: none;
   color: @color-text-main;
-}
-
-.form__btn {
-  margin-top: 10px;
-  margin-bottom: 15px;
 }
 
 //----------------------------------------------------
@@ -77,11 +100,15 @@
 .form__input-wrapper {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 
   &--options {
     margin-bottom: 25px;
     margin-left: 46px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -89,7 +116,10 @@
   box-sizing: border-box;
   width: 100%;
   min-width: 50px;
-  padding: 12px;
+  padding-top: 13px;
+  padding-right: 10px;
+  padding-bottom: 12px;
+  padding-left: 16px;
 
   border: none;
   outline: 1px solid fade(@color-border-main, 50%);
@@ -110,9 +140,10 @@
   }
 
   &--text-area {
-    margin-bottom: 25px;
-
     resize: none;
+
+    padding-top: 14px;
+    padding-bottom: 9px;
 
     &:hover {
       outline-color: @color-border-main;
@@ -125,29 +156,39 @@
     }
   }
 
+  &--error {
+    outline-color: @color-error;
+    outline-width: 2px;
+  }
+
   &::-webkit-input-placeholder {
     color: @color-text-main;
     text-transform: uppercase;
+    opacity: 1;
   }
 
   &::-moz-placeholder {
     color: @color-text-main;
     text-transform: uppercase;
+    opacity: 1;
   }
 
   &:-moz-placeholder {
     color: @color-text-main;
     text-transform: uppercase;
+    opacity: 1;
   }
 
   &:-ms-input-placeholder {
     color: @color-text-main;
     text-transform: uppercase;
+    opacity: 1;
   }
 
   // Стили для текстовых инпутов с иконками
 
   &--icon {
+    margin-left: 10px;
     padding-right: 35px;
 
     background-repeat: no-repeat;
@@ -156,13 +197,31 @@
   &--email {
     background-image: url("../img/icon-mail.svg");
     background-size: 18px 14px;
-    background-position: 95% center;
+    background-position: 93% center;
+
+    &:focus,
+    &:active {
+      background-image: url("../img/icon-mail-active.svg");
+    }
+
+    &.form__input--error {
+      background-image: url("../img/icon-mail-error.svg");
+    }
   }
 
   &--phone {
     background-image: url("../img/icon-phone.svg");
     background-size: 21px 21px;
-    background-position: 95% center;
+    background-position: 93% center;
+
+    &:focus,
+    &:active {
+      background-image: url("../img/icon-phone-active.svg");
+    }
+
+    &.form__input--error {
+      background-image: url("../img/icon-phone-error.svg");
+    }
   }
 
   // Общие стили для поведения радиобаттонов и чекбоксов
@@ -199,7 +258,7 @@
 
         background-color: @color-accent;
         border-radius: 50%;
-        transform: translateX(-46px + 32 / 2 - 12 / 2) translateY(-50%);
+        transform: translateX(-46px + 30 / 2 - 12 / 2) translateY(-50%);
       }
     }
   }
@@ -215,7 +274,7 @@
         border: 2px solid @color-accent;
         border-top: none;
         border-left: none;
-        transform: rotate(45deg) translateX(-46px + 32 / 2 - 12 / 2) translateY(15px);
+        transform: rotate(45deg) translateX(-46px + 30 / 2 - 12 / 2) translateY(15px);
       }
     }
   }
@@ -237,8 +296,8 @@
       top: 50%;
       left: 0;
 
-      width: 30px;
-      height: 30px;
+      width: 28px;
+      height: 28px;
 
       border: 1px solid @color-border-main;
       transform: translateX(-46px) translateY(-50%);
