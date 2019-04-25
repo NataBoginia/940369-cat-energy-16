@@ -13,7 +13,7 @@
 .form__list {
   .reset-list();
 
-  margin-bottom: 23px;
+  margin-bottom: 25px;
 
   &--bordered {
     margin-left: -20px;
@@ -51,7 +51,7 @@
   position: relative;
 
   display: inline-block;
-  margin-top: 28px;
+  margin-top: 29px;
   margin-bottom: 35px;
 
   font-size: 24px;
@@ -65,7 +65,7 @@
     content: "";
 
     position: absolute;
-    top: 12px;
+    top: 14px;
     left: 100%;
 
     height: 3px;
@@ -73,7 +73,6 @@
     margin-left: 22px;
 
     background-color: @color-accent;
-    transform: translateY(50%);
   }
 }
 
@@ -120,6 +119,9 @@
   padding-right: 10px;
   padding-bottom: 12px;
   padding-left: 16px;
+
+  font-size: 16px;
+  line-height: 18px;
 
   border: none;
   outline: 1px solid fade(@color-border-main, 50%);
@@ -192,12 +194,12 @@
     padding-right: 35px;
 
     background-repeat: no-repeat;
+    background-position: calc(100% - 15px) center;
   }
 
   &--email {
     background-image: url("../img/icon-mail.svg");
     background-size: 18px 14px;
-    background-position: 93% center;
 
     &:focus,
     &:active {
@@ -212,7 +214,6 @@
   &--phone {
     background-image: url("../img/icon-phone.svg");
     background-size: 21px 21px;
-    background-position: 93% center;
 
     &:focus,
     &:active {
@@ -296,8 +297,8 @@
       top: 50%;
       left: 0;
 
-      width: 28px;
-      height: 28px;
+      width: 30px  - 1 * 2;
+      height: 30px  - 1 * 2;
 
       border: 1px solid @color-border-main;
       transform: translateX(-46px) translateY(-50%);
@@ -324,40 +325,137 @@
   }
 
   .form__title {
+    margin-top: 65px;
+    margin-bottom: 78px;
+
     font-size: 36px;
     line-height: 36px;
-  }
 
-  .form__list {
-    &--bordered {
-      margin-left: 0;
-      margin-right: 0;
-      padding: 25px 30px;
+    &::after {
+      top: 22px;
 
-      border: 1px solid @color-border-main;
+      width: 50vw;
+      margin-left: 40px;
+    }
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 22px;
+      right: 100%;
+
+      height: 3px;
+      width: 50vw;
+      margin-right: 40px;
+
+      background-color: @color-accent;
     }
   }
 
   .form__input-wrapper {
+    margin-bottom: 22px;
+
+    &--options {
+      margin-bottom: 32px;
+      margin-left: 60px;
+    }
+
     &--row {
-      width: 250px;
+      width: 285px - 60;
+      margin-bottom: 50px;
+
+      &:last-child {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  .form__list {
+    margin-bottom: 73px;
+
+    &--bordered {
+      margin-right: 0;
+      margin-left: 0;
+      padding-top: 35px;
+      padding-right: 27px;
+      padding-bottom: 35px;
+      padding-left: 27px;
+
+      &:last-child {
+        margin-bottom: 10px;
+      }
+    }
+
+    &--options {
+      justify-content: space-between;
+      margin-top: -15px;
     }
   }
 
   .form__input {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &--text {
+      margin-left: 20px;
+    }
+
     &--text-area {
+      height: 30px * 5 + 9 + 13;
+      padding-top: 9px;
+      padding-bottom: 13px;
+      padding-left: 20px;
+
       line-height: 30px;
+    }
+
+    // Стили для кружка радиобаттонов
+
+    &--radio {
+      &:checked {
+        & + .form__label--icon::after {
+          width: 18px;
+          height: 18px;
+
+          transform: translateX(-60px + 40 / 2 - 18 / 2) translateY(-50%);
+        }
+      }
+    }
+
+    // Стили для галки чекбоксов
+
+    &--checkbox {
+      &:checked {
+        & + .form__label--icon::after {
+          width: 11px;
+          height: 21px;
+
+          transform: rotate(45deg) translateX(-44px) translateY(21px);
+        }
+      }
     }
   }
 
   .form__btn {
-    width: 280px;
-    margin-right: 20px;
+    width: 283px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    font-size: 20px;
   }
 
   .form__note {
+    width: 285px;
+
     font-size: 16px;
     line-height: 16px;
+    text-align: left;
   }
 
   .form__wrapper {
@@ -368,7 +466,8 @@
     align-items: center;
 
     &--btn {
-      justify-content: flex-start;
+      margin-top: 10px;
+      margin-bottom: 20px;
     }
 
     &--columns {
@@ -379,6 +478,21 @@
     &--contact {
       flex-direction: column;
       align-items: stretch;
+    }
+
+    &--options {
+      margin-bottom: 52px;
+    }
+  }
+
+  .form__label {
+    &--icon {
+      &::before {
+        width: 40px - 1 * 2;
+        height: 40px - 1 * 2;
+
+        transform: translateX(-60px) translateY(-50%);
+      }
     }
   }
 }

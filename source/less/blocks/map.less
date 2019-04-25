@@ -27,6 +27,9 @@
 }
 
 .map__address {
+  display: flex;
+  flex-direction: column;
+
   width: 140px;
 
   font-size: 14px;
@@ -39,13 +42,15 @@
 
 @media (min-width: @tablet-width) {
   .map__desc {
-    margin-top: 63px;
-    margin-bottom: 63px;
+    width: @tablet-width - 2 * @tablet-padding - 2 * 40;
+    padding-top: 65px;
+    padding-right: @tablet-padding + 40;
+    padding-bottom: 60px;
+    padding-left: @tablet-padding + 40;
   }
 
   .map__title {
     width: 160px;
-    margin-left: 40px;
 
     font-size: 20px;
     line-height: 25px;
@@ -53,10 +58,17 @@
 
   .map__address {
     width: 160px;
-    margin-right: 40px;
 
     font-size: 16px;
     text-align: right;
+  }
+
+  .map__address-street {
+    margin-bottom: auto;
+  }
+
+  .map__scheme {
+    height: 400px;
   }
 }
 
@@ -71,8 +83,6 @@
     left: @desktop-padding;
 
     width: 410px;
-    margin: 0;
-    padding: 60px 80px 60px 80px;
 
     background-color: @color-bg-main;
   }

@@ -10,8 +10,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 10px;
   padding-right: @mobile-padding;
+  padding-bottom: 10px;
   padding-left: @mobile-padding;
 
   border-bottom: 1px solid @color-border-sub;
@@ -107,9 +107,15 @@
     padding-top: 20px;
   }
 
+  .main-menu__wrapper {
+    padding: 0;
+
+    border: none;
+  }
+
   .main-menu__logo-img {
     width: 174px;
-    height: auto;
+    height: 59px;
   }
 
   .main-menu__toggle {
@@ -119,6 +125,7 @@
   .main-menu__list {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     width: 490px;
   }
 
@@ -128,12 +135,32 @@
 
   .main-menu__link {
     margin-left: 35px;
-    padding: 23px 0;
+    padding-right: 0;
+    padding-left: 0;
 
     font-size: 18px;
     line-height: 25px;
     font-family: @font-regular;
     color: @color-text-sub;
+
+    &--current {
+      position: relative;
+
+      cursor: default;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        bottom: 14px;
+        left: 0;
+
+        width: 100%;
+        height: 2px;
+
+        background-color: @color-accent;
+      }
+    }
   }
 }
 
@@ -150,8 +177,7 @@
   }
 
   .main-menu__list {
-    width: 720px - @desktop-padding;
-    padding-top: 25px;
+    width: 520px;
   }
 
   .main-menu__link {
