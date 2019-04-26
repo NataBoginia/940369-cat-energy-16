@@ -71,6 +71,7 @@
   .guide__item {
     box-sizing: border-box;
     width: 260px;
+    min-height: 281px;
 
     font-size: 16px;
     line-height: 24px;
@@ -80,6 +81,33 @@
 
       width: 80px;
       height: 80px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 100%;
+
+      font-family: @font-regular;
+      font-size: 281px;
+      line-height: 281px;
+      color: @color-bg-sub;
+    }
+
+    &--natural::before {
+      content: "1";
+    }
+
+    &--powder::before {
+      content: "2";
+    }
+
+    &--mealtime::before {
+      content: "3";
+    }
+
+    &--weight::before {
+      content: "4";
     }
   }
 }
