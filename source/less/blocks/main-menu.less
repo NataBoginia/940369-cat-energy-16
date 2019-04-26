@@ -126,6 +126,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    flex-grow: 1;
     width: 490px;
   }
 
@@ -166,12 +167,14 @@
 
 @media (min-width: @desktop-width) {
   .main-menu {
+    padding-top: 50px;
+
     background-color: transparent;
   }
 
   .main-menu__logo-img {
     width: 203px;
-    height: auto;
+    height: 60px;
 
     background-color: @color-bg-main;
   }
