@@ -13,9 +13,8 @@
 
   position: relative;
 
-  display: flex;
-  align-items: center;
-  margin-bottom: 32px;
+  display: inline-block;
+  margin-bottom: 34px;
 
   font-size: 24px;
   line-height: 24px;
@@ -25,11 +24,14 @@
   &::after {
     content: "";
 
-    flex-grow: 1;
+    position: absolute;
+
+    top: 11px;
+    left: 100%;
+
     height: 3px;
-    min-width: @mobile-padding;
+    width: 100vw;
     margin-left: 22px;
-    margin-right: -50vw;
 
     background-color: @color-accent;
     transform: translateY(100%);
@@ -37,8 +39,6 @@
 }
 
 .extra-catalog__item {
-  padding-top: 14px;
-
   border-bottom: 1px solid @color-border-main;
 
   &:first-child {
@@ -92,32 +92,74 @@
 
 @media (min-width: @tablet-width) {
   .extra-catalog {
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 75px;
   }
 
   .extra-catalog__item {
     border: 1px solid @color-border-main;
+    border-bottom: none;
+
+    &:last-child {
+      border-bottom: 1px solid @color-border-main;
+    }
   }
 
   .extra-catalog__title {
+    margin-bottom: 80px;
+
+    padding-left: 37px;
+
     font-size: 36px;
     line-height: 36px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 23px;
+      right: 100%;
+
+      height: 3px;
+      width: 100vw;
+
+      background-color: @color-accent;
+    }
+
+    &::after {
+      top: 20px;
+
+      margin-left: 36px;
+    }
   }
 
   .extra-catalog__list {
     display: flex;
     flex-direction: column;
+    margin-bottom: 70px;
   }
 
   .extra-catalog__gift {
+    display: flex;
     min-height: 200px;
+    padding: 0;
+    padding-right: 105px;
 
     background-image: url("../img/gift-photo-tablet@1x.jpg");
     background-size: 708px 200px;
+
+    &::before {
+      top: 50%;
+      left: 0;
+
+      transform: translateX(90px) translateY(-37px);
+    }
   }
 
   .extra-catalog__gift-text {
+    width: 180px;
+    margin-left: auto;
+    margin-bottom: auto;
+
     font-size: 16px;
     line-height: 20px;
     font-family: @font-add;

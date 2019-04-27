@@ -2,28 +2,34 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  padding-bottom: 24px;
 
   background-color: @color-bg-main;
 
   &--more {
     position: relative;
     padding-top: 80px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 25px;
+
+      align-self: center;
+
+      width: 31px;
+      height: 31px;
+
+      background-image: url("../img/icon-plus-mobile.svg");
+      background-repeat: no-repeat;
+      opacity: 0.2;
+    }
   }
 
-  &--more::before {
-    content: "";
-
-    position: absolute;
-    top: 25px;
-
-    align-self: center;
-
-    width: 31px;
-    height: 31px;
-
-    background-image: url("../img/icon-plus-mobile.svg");
-    background-repeat: no-repeat;
-    opacity: 0.2;
+  &--extra {
+    padding-top: 14px;
+    padding-bottom: 17px;
   }
 }
 
@@ -102,6 +108,7 @@
 
   &--extra {
     margin-bottom: 15px;
+    margin-left: auto;
 
     font-size: 14px;
     line-height: 14px;
@@ -121,16 +128,10 @@
 }
 
 .food-card__btn {
-  margin-bottom: 24px;
-
   &--more {
     color: @color-text-main;
 
     background-color: @color-bg-sub;
-  }
-
-  &--extra {
-    margin-bottom: 17px;
   }
 
   &--more:hover,
@@ -157,87 +158,159 @@
 
 @media (min-width: @tablet-width) {
   .food-card {
-    justify-content: flex-end;
-    width: 324px;
+    &--img {
+      align-items: center;
+      padding-right: 0;
+      padding-left: 0;
+      padding-bottom: 40px;
 
-    background-color: @color-bg-sub;
+      background-image: linear-gradient(transparent 82px, @color-bg-sub 82px);
+    }
 
     &--more {
+      align-items: center;
+      margin-top: 82px;
+      padding-top: 163px;
+      padding-bottom: 40px;
+
       border: 1px solid @color-border-main;
       background-color: @color-bg-main;
+
+      &::before {
+        top: 52px;
+
+        width: 61px;
+        height: 61px;
+
+        background-image: url("../img/icon-plus.svg");
+      }
     }
 
     &--extra {
       width: 100%;
-      background-color: @color-bg-main;
-    }
+      padding-top: 25px;
+      padding-right: 36px;
+      padding-bottom: 27px;
+      padding-left: 36px;
 
-    &--img {
-      display: block;
+      background-color: @color-bg-main;
     }
   }
 
   .food-card__container {
     &--outer {
       flex-direction: column;
-      margin-top: -82px;
+      align-items: center;
     }
 
     &--inner {
-      margin-top: auto;
+      padding-top: 37px;
+      padding-bottom: 34px;
     }
 
     &--extra {
       flex-direction: row;
-      align-items: baseline;
+      align-items: bottom;
+      margin-bottom: 20px;
+    }
+  }
+
+  .food-card__title {
+    width: 135px;
+    margin-right: 0;
+    margin-bottom: 20px;
+
+    font-size: 20px;
+    text-align: center;
+
+    &--extra {
+      margin-bottom: 0;
+      padding-bottom: 6px;
+
+      line-height: 20px;
+      text-align: left;
+    }
+
+    &--more {
+      margin-bottom: 25px;
+    }
+  }
+
+  .food-card__link {
+    &--img {
+      display: flex;
+      height: 208px;
     }
   }
 
   .food-card__img {
     width: 324px;
     height: auto;
-
     margin-top: auto;
   }
 
-  .food-card__link {
-    display: flex;
-
-    &--img {
-      height: 208px;
-    }
-  }
-
-  .food-card__title {
-    font-size: 20px;
-    text-align: center;
-
-    &--extra {
-      line-height: 20px;
-      text-align: left;
-    }
-  }
-
   .food-card__table {
+    width: 250px;
+    margin-bottom: 0;
+
     font-size: 16px;
+    vertical-align: top;
 
     border-collapse: collapse;
 
     &--extra {
-      width: 200px;
+      width: 300px;
 
       font-size: 16px;
       line-height: 20px;
     }
   }
 
-  .food-card__parameter-name,
-  .food-card__parameter-value {
+  .food-card__parameter-name {
+    padding-top: 7px;
+    padding-bottom: 7px;
+
     border-bottom: 1px solid @color-border-main;
 
     &--extra {
+      padding-top: 0;
+      padding-bottom: 0;
+
+      text-align: right;
+
       border: none;
     }
+  }
+
+  .food-card__parameter-value {
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid @color-border-main;
+
+    &--extra {
+      width: 95px;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      border: none;
+    }
+  }
+
+  .food-card__btn {
+    width: 250px;
+    margin-top: auto;
+
+    &--extra {
+      width: 100%;
+    }
+  }
+
+  .food-card__text {
+    width: 170px;
+
+    font-size: 16px;
+    line-height: 18px;
   }
 }
 
