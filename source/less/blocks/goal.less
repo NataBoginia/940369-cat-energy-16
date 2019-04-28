@@ -106,46 +106,65 @@
 
 @media (min-width: @tablet-width) {
   .goal {
+    padding-top: 75px;
+    padding-bottom: 47px;
+    padding-left: 55px;
+
     &::before {
-      top: 50%;
+      top: 0;
       left: 100%;
 
       width: 200px;
       height: 200px;
 
-      transform: translateY(-50%) translateX(-200px - 60);
+      transform: translateY(92px) translateX(-260px);
     }
 
     &::after {
-      top: 50%;
+      top: 0;
       left: 100%;
 
       width: 300px;
       height: 200px;
 
       background-position: center;
-      transform: translateY(-50%) translateX(-300px);
     }
 
     &--slim::after {
       background-size: 141px 194px;
+      transform: translateY(78px) translateX(-312px);
     }
 
     &--pro::after {
       background-size: 268px 113px;
+      transform: translateY(92px) translateX(-311px);
     }
   }
 
   .goal__title {
+    margin-left: 0;
+    margin-bottom: 25px;
+
     font-size: 36px;
   }
 
   .goal__text {
+    width: 340px;
+    margin-bottom: 20px;
+
     font-size: 16px;
     line-height: 24px;
+
+    border: none;
+
+    &--slim {
+      width: 380px;
+    }
   }
 
   .goal__link {
+    padding-right: 45px;
+
     font-size: 20px;
     line-height: 20px;
   }
