@@ -1,5 +1,5 @@
 .slider__img-container {
-  margin-bottom: 18px;
+  margin-bottom: 19px;
   margin-right: -20px;
   margin-left: -20px;
 }
@@ -13,11 +13,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+  width: 100%;
   padding: 0 30px;
 }
 
 .slider__btn {
-  display: block;
+  flex-shrink: 0;
   padding: 10px;
 
   font-size: 16px;
@@ -31,10 +33,12 @@
 
   &--before {
     margin-right: 10px;
+    text-align: right;
   }
 
   &--after {
     margin-left: 10px;
+    text-align: left;
   }
 
   &:hover,
@@ -55,7 +59,7 @@
 
   // Стили для слайдера в Firefox
   &::-moz-range-track {
-    min-width: 82px;
+    min-width: 72px;
     height: 12px;
     padding-left: 5px;
     padding-right: 5px;
@@ -79,7 +83,7 @@
 
   // Стили для слайдера в Chrome
   &::-webkit-slider-runnable-track {
-    min-width: 82px;
+    min-width: 84px;
     height: 14px;
     padding-left: 5px;
     padding-right: 5px;
@@ -142,7 +146,9 @@
 
 @media (min-width: @tablet-width) {
   .slider__img-container {
+    margin-right: 0;
     margin-bottom: 7px;
+    margin-left: 0;
 
     text-align: center;
   }
