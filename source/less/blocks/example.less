@@ -167,13 +167,6 @@
 
 @media (min-width: @tablet-width) and (max-width: @desktop-width) {
   .example__slider {
-    width: @tablet-width - 2 * @tablet-padding;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: @tablet-padding;
-    padding-bottom: 27px;
-    padding-left: @tablet-padding;
-
     background-image: linear-gradient(@color-bg-main 169px, transparent 169px),
     linear-gradient(90deg, @color-bg-sub 50%, @color-button-hover 50%);
   }
@@ -193,6 +186,15 @@
       display: flex;
       justify-content: space-between;
     }
+
+    &--slider {
+      width: @tablet-width - 2 * @tablet-padding;
+      margin-right: auto;
+      margin-left: auto;
+      padding-right: @tablet-padding;
+      padding-bottom: 27px;
+      padding-left: @tablet-padding;
+    }
   }
 }
 
@@ -200,7 +202,7 @@
   .example {
     display: flex;
     justify-content: space-between;
-    width: @desktop-width - 2 * @desktop-padding;
+    // width: @desktop-width - 2 * @desktop-padding;
     margin-right: auto;
     margin-left: auto;
     padding-right: @desktop-padding;
