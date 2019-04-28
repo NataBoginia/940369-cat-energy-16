@@ -199,14 +199,6 @@
 
 @media (min-width: @desktop-width) {
   .example {
-    display: flex;
-    justify-content: space-between;
-    width: @desktop-width - 2 * @desktop-padding;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: @desktop-padding;
-    padding-left: @desktop-padding;
-
     background-image: linear-gradient(@color-bg-main 135px, transparent 135px), linear-gradient(to right, @color-bg-sub 50%, @color-button-hover 50%);
   }
 
@@ -217,6 +209,16 @@
 
     &--inner {
       flex-direction: column;
+    }
+
+    &--main {
+      display: flex;
+      justify-content: space-between;
+      width: @desktop-width - 2 * @desktop-padding;
+      margin-right: auto;
+      margin-left: auto;
+      padding-right: @desktop-padding;
+      padding-left: @desktop-padding;
     }
   }
 
