@@ -81,14 +81,14 @@
 
 @media (max-width: @tablet-width) {
   .example__container {
-      &--outer {
-        width: @mobile-width - 2 * @mobile-padding;
-        margin-right: auto;
-        margin-left: auto;
-        padding-top: 17px;
-        padding-right: @mobile-padding;
-        padding-left: @mobile-padding;
-      }
+    &--outer {
+      width: @mobile-width - 2 * @mobile-padding;
+      margin-right: auto;
+      margin-left: auto;
+      padding-top: 17px;
+      padding-right: @mobile-padding;
+      padding-left: @mobile-padding;
+    }
   }
 
   .example__slider {
@@ -167,20 +167,19 @@
 
 @media (min-width: @tablet-width) and (max-width: @desktop-width) {
   .example__slider {
-    background-image: linear-gradient(@color-bg-main 169px, transparent 169px),
-    linear-gradient(90deg, @color-bg-sub 50%, @color-button-hover 50%);
+    background-image: linear-gradient(@color-bg-main 169px, transparent 169px), linear-gradient(to right, @color-bg-sub 50%, @color-button-hover 50%);
   }
 
   .example__container {
-      &--outer {
-        width: @tablet-width - 2 * @tablet-padding;
-        margin-right: auto;
-        margin-bottom: 80px;
-        margin-left: auto;
-        padding-top: 17px;
-        padding-right: @tablet-padding;
-        padding-left: @tablet-padding;
-      }
+    &--outer {
+      width: @tablet-width - 2 * @tablet-padding;
+      margin-right: auto;
+      margin-bottom: 80px;
+      margin-left: auto;
+      padding-top: 17px;
+      padding-right: @tablet-padding;
+      padding-left: @tablet-padding;
+    }
 
     &--inner {
       display: flex;
@@ -202,14 +201,12 @@
   .example {
     display: flex;
     justify-content: space-between;
-    // width: @desktop-width - 2 * @desktop-padding;
     margin-right: auto;
     margin-left: auto;
     padding-right: @desktop-padding;
     padding-left: @desktop-padding;
 
-    background-image: linear-gradient(@color-bg-main 135px, transparent 135px),
-    linear-gradient(90deg, @color-bg-sub 50%, @color-button-hover 50%);
+    background-image: linear-gradient(@color-bg-main 135px, transparent 135px), linear-gradient(to right, @color-bg-sub 50%, @color-button-hover 50%);
   }
 
   .example__container {
@@ -254,7 +251,6 @@
     width: 690px;
     margin-top: -55px;
 
-    background-image: linear-gradient(@color-bg-main 190px, transparent 190px),
-    linear-gradient(90deg, @color-bg-sub 408px, @color-button-hover 408px);
+    background-image: linear-gradient(@color-bg-main 190px, transparent 190px), linear-gradient(to right, @color-bg-sub 408px, @color-button-hover 408px);
   }
 }
