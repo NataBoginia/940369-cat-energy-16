@@ -5,17 +5,6 @@
   background-color: @color-bg-sub;
 }
 
-.example__container {
-    &--outer {
-      width: @mobile-width - 2 * @mobile-padding;
-      margin-right: auto;
-      margin-left: auto;
-      padding-top: 17px;
-      padding-right: @mobile-padding;
-      padding-left: @mobile-padding;
-    }
-}
-
 .example__title {
   .reset-header();
 
@@ -90,35 +79,31 @@
   text-align: center;
 }
 
-.example__slider {
-  width: @mobile-width - 2 * @mobile-padding;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: @mobile-padding;
-  padding-bottom: 27px;
-  padding-left: @mobile-padding;
+@media (max-width: @tablet-width) {
+  .example__container {
+      &--outer {
+        width: @mobile-width - 2 * @mobile-padding;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 17px;
+        padding-right: @mobile-padding;
+        padding-left: @mobile-padding;
+      }
+  }
+
+  .example__slider {
+    width: @mobile-width - 2 * @mobile-padding;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: @mobile-padding;
+    padding-bottom: 27px;
+    padding-left: @mobile-padding;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .example {
     background-color: @color-bg-main;
-  }
-
-  .example__container {
-      &--outer {
-        width: @tablet-width - 2 * @tablet-padding;
-        margin-right: auto;
-        margin-bottom: 80px;
-        margin-left: auto;
-        padding-top: 17px;
-        padding-right: @tablet-padding;
-        padding-left: @tablet-padding;
-      }
-
-    &--inner {
-      display: flex;
-      justify-content: space-between;
-    }
   }
 
   .example__title {
@@ -165,14 +150,22 @@
   }
 
   .example__cost {
+    display: flex;
+    flex-direction: column;
     width: 180px;
     margin-bottom: 0;
 
     font-size: 20px;
-    line-height: 30px;
+    line-height: 20px;
     text-align: right;
   }
 
+  .example__cost-name {
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width) {
   .example__slider {
     width: @tablet-width - 2 * @tablet-padding;
     margin-right: auto;
@@ -182,25 +175,84 @@
     padding-left: @tablet-padding;
 
     background-image: linear-gradient(@color-bg-main 169px, transparent 169px),
-    linear-gradient(90deg, @color-bg-sub 50%, @color-button-hover 50%),
-;
+    linear-gradient(90deg, @color-bg-sub 50%, @color-button-hover 50%);
+  }
+
+  .example__container {
+      &--outer {
+        width: @tablet-width - 2 * @tablet-padding;
+        margin-right: auto;
+        margin-bottom: 80px;
+        margin-left: auto;
+        padding-top: 17px;
+        padding-right: @tablet-padding;
+        padding-left: @tablet-padding;
+      }
+
+    &--inner {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  // .example__title {
-  // }
+  .example {
+    display: flex;
+    justify-content: space-between;
+    width: @desktop-width - 2 * @desktop-padding;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: @desktop-padding;
+    padding-left: @desktop-padding;
 
-  // .example__text {
-  // }
+    background-image: linear-gradient(@color-bg-main 135px, transparent 135px),
+    linear-gradient(90deg, @color-bg-sub 50%, @color-button-hover 50%);
+  }
+
+  .example__container {
+    &--outer {
+      width: 440px;
+    }
+
+    &--inner {
+      flex-direction: column;
+    }
+  }
+
+  .example__title {
+    margin-bottom: 145px;
+  }
+
+  .example__text {
+    margin-bottom: 68px;
+  }
+
+  .example__list {
+    margin-bottom: 55px;
+  }
+
+  .example__cost {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 325px;
+
+    text-align: left;
+  }
+
+  .example__cost-name {
+    margin-bottom: 0;
+  }
 
   .example__parameter-name {
     background-color: @color-bg-sub;
   }
 
   .example__slider {
-    margin-top: -200px;
+    width: 690px;
+    margin-top: -55px;
 
-    background-color: transparent;
+    background-image: linear-gradient(@color-bg-main 190px, transparent 190px),
+    linear-gradient(90deg, @color-bg-sub 408px, @color-button-hover 408px);
   }
 }

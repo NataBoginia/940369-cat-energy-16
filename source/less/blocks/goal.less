@@ -172,7 +172,8 @@
 
 @media (min-width: @desktop-width) {
   .goal {
-    max-width: 470px;
+    padding-right: 50px;
+    padding-left: 50px;
 
     &::before {
       top: 0;
@@ -181,7 +182,7 @@
       width: 100px;
       height: 100px;
 
-      transform: translateY(50%) translateX(50%);
+      transform: translateY(46px) translateX(51px);
     }
 
     &::after {
@@ -192,15 +193,31 @@
       height: 97px;
 
       background-position: center;
-      transform: translateY(50%) translateX(50%);
     }
 
     &--slim::after {
       background-size: 71px 97px;
+      transform: translateY(40px) translateX(30px);
     }
 
     &--pro::after {
       background-size: 134px 57px;
+      transform: translateY(47px) translateX(30px);
     }
+  }
+
+  .goal__title {
+    margin-bottom: 74px;
+    padding-left: 162px;
+  }
+
+  .goal__text {
+    width: auto;
+    margin-bottom: 16px;
+    padding-bottom: 0;
+  }
+
+  .goal__link {
+    padding-right: 48px;
   }
 }

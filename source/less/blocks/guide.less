@@ -133,7 +133,23 @@
 }
 
 @media (min-width: @desktop-width) {
+  .guide {
+    border-bottom: none;
+  }
+
   .guide__item {
     width: 245px;
+    margin-bottom: 0;
+    padding-right: 0;
+
+    &::before {
+      transform: translateX(123px) translateY(-40px);
+    }
+
+    &--natural::before {
+      content: "1";
+
+      transform: translateX(106px) translateY(-40px);
+    }
   }
 }
