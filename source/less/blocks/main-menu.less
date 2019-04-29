@@ -34,7 +34,7 @@
 
 .main-menu__link {
   display: block;
-  padding: 22px 10px 23px 10px;
+  padding: 23px 10px 22px 10px;
 
   font-size: 20px;
   line-height: 20px;
@@ -45,11 +45,11 @@
 
   &:hover,
   &:focus {
-    color: fade(@color-title, 60%);
+    opacity: 0.6;
   }
 
   &:active {
-    color: fade(@color-title, 30%);
+    opacity: 0.3;
   }
 
   &--current {
@@ -196,7 +196,7 @@
 
     &--current {
       &::after {
-        bottom: 13px;
+        bottom: 12px;
       }
     }
   }

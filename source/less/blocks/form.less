@@ -51,6 +51,8 @@
   .reset-header();
 
   position: relative;
+
+  display: inline-block;
   margin-bottom: 27px;
   margin-left: -20px;
   padding-top: 17px;
@@ -62,19 +64,19 @@
   text-transform: none;
   color: @color-title;
 
-  background-color: #ffffff;
+  background-color: @color-bg-main;
 
   &::after {
     content: "";
 
     position: absolute;
-    top: 31px;
-    left: 50%;
+    top: 32px;
+    left: 100%;
 
     z-index: -1;
 
     height: 3px;
-    width: 100vw;
+    width: 100%;
 
     background-color: @color-accent;
     transform: translateX(-50%);
@@ -331,7 +333,7 @@
   }
 
   .form__title {
-    margin-bottom: 67px;
+    margin-bottom: 68px;
     margin-left: -40px;
     padding-top: 55px;
     padding-right: 42px;
@@ -341,7 +343,7 @@
     line-height: 36px;
 
     &::after {
-      top: 77px;
+      top: 78px;
     }
   }
 
@@ -369,7 +371,7 @@
     &--bordered {
       margin-right: 0;
       margin-left: 0;
-      padding-top: 35px;
+      padding-top: 34px;
       padding-right: 27px;
       padding-bottom: 35px;
       padding-left: 27px;
@@ -380,7 +382,7 @@
     }
 
     &--options {
-      margin-top: -15px;
+      margin-top: -16px;
     }
   }
 
@@ -458,7 +460,7 @@
     align-items: center;
 
     &--btn {
-      margin-top: 50px;
+      margin-top: 49px;
       margin-bottom: 20px;
     }
 
@@ -526,7 +528,7 @@
     }
 
     &--btn {
-      margin-top: 53px;
+      margin-top: 55px;
     }
   }
 

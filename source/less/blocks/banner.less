@@ -58,7 +58,7 @@
 
 @media (min-width: @tablet-width) {
   .banner {
-    padding-top: 48px;
+    padding-top: 50px;
 
     text-align: left;
     color: @color-title;
@@ -75,7 +75,8 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
-    padding-left: @tablet-padding + 133;
+    width: @tablet-width - 2 * @tablet-padding - 90;
+    padding-left: 90px + @tablet-padding;
   }
 
   .banner__title {
@@ -102,7 +103,7 @@
   }
 
   .banner__btn {
-    width: auto;
+    width: min-content;
     margin-right: auto;
     margin-bottom: -80px;
     padding: 15px 27px 17px 27px;
@@ -117,7 +118,7 @@
 @media (min-width: @desktop-width) {
   .banner {
     margin-bottom: 130px;
-    padding-top: 100px;
+    padding-top: 103px;
 
     background-color: transparent;
 
@@ -128,7 +129,7 @@
       top: -120px;
       left: 50%;
 
-      width: 50vw;
+      width: 50%;
       height: 696px;
 
       background-image: url("../img/index-background-desktop@1x.jpg");
@@ -137,8 +138,13 @@
     }
   }
 
+  .banner__title {
+    margin-bottom: 40px;
+  }
+
   .banner__container {
-    padding-left: 135px + @desktop-padding;
+    width: @desktop-width - 2 * @desktop-padding - 80;
+    padding-left: 80px + @desktop-padding;
   }
 
   .banner__img {
