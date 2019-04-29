@@ -67,12 +67,12 @@
 
   background-color: @color-bg-main;
 
-  &::after {
+  &::before {
     content: "";
 
     position: absolute;
     top: 32px;
-    left: 0;
+    right: 0;
 
     z-index: -1;
 
@@ -80,7 +80,20 @@
     width: 100vw;
 
     background-color: @color-accent;
-    transform: translateX(-@mobile-padding);
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 32px;
+
+    z-index: -1;
+
+    height: 3px;
+    width: 100vw;
+
+    background-color: @color-accent;
   }
 }
 
@@ -344,10 +357,9 @@
     font-size: 36px;
     line-height: 36px;
 
+    &::before,
     &::after {
       top: 78px;
-
-      transform: translateX(-@tablet-padding);
     }
   }
 
@@ -540,10 +552,9 @@
     padding-top: 58px;
     margin-bottom: 68px;
 
+    &::before,
     &::after {
       top: 80px;
-
-      transform: translateX(-@desktop-padding);
     }
   }
 

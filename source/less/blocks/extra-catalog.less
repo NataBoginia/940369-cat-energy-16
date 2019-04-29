@@ -26,12 +26,12 @@
 
   background-color: @color-bg-main;
 
-  &::after {
+  &::before {
     content: "";
 
     position: absolute;
     top: 14px;
-    left: 0;
+    right: 0;
 
     z-index: -1;
 
@@ -39,7 +39,20 @@
     width: 100vw;
 
     background-color: @color-accent;
-    transform: translateX(-@mobile-padding);
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 14px;
+
+    z-index: -1;
+
+    height: 3px;
+    width: 100vw;
+
+    background-color: @color-accent;
   }
 }
 
@@ -122,10 +135,9 @@
     font-size: 36px;
     line-height: 36px;
 
+    &::before,
     &::after {
       top: 22px;
-
-      transform: translateX(-@tablet-padding);
     }
   }
 
@@ -179,10 +191,6 @@
     margin-left: -40px;
     padding-left: 40px;
     padding-right: 34px;
-
-    &::after {
-      transform: translateX(-@desktop-padding);
-    }
   }
 
   .extra-catalog__list {
