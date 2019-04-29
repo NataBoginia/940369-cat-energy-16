@@ -1,3 +1,19 @@
-.page-header {
-  border: 1px dashed #000000;
+@media (min-width: @tablet-width) {
+  .page-header__menu {
+    width: @tablet-width - 2 * @tablet-padding;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: @tablet-padding;
+    padding-left: @tablet-padding;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__menu {
+    width: @desktop-width - 2 * @desktop-padding;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: @desktop-padding;
+    padding-left: @desktop-padding;
+  }
 }

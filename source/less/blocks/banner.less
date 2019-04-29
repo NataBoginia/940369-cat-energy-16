@@ -1,13 +1,10 @@
 .banner {
   position: relative;
-
-  margin-bottom: 20px;
+  padding-top: 26px;
 
   font-family: @font-regular;
   text-align: center;
   color: @color-bg-main;
-
-  border: 1px dashed #000000;
 
   &::before {
     content: "";
@@ -21,6 +18,7 @@
     background-color: @color-accent-bg;
     background-image: url("../img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
+    background-size: 320px 305px;
     background-position: center;
 
     z-index: -1;
@@ -30,7 +28,7 @@
 .banner__title {
   .reset-header();
 
-  margin-top: 26px;
+  margin-bottom: 26px;
 
   font-size: 36px;
   line-height: 36px;
@@ -38,7 +36,7 @@
 
 .banner__text {
   margin: 0;
-  margin-top: 26px;
+  margin-bottom: 30px;
 
   font-size: 14px;
   line-height: 14px;
@@ -46,40 +44,51 @@
 }
 
 .banner__img {
-  margin-top: 29px;
+  width: 280px;
+  height: 270px;
 }
 
 .banner__btn {
   font-size: 14px;
   line-height: 18px;
+
+  padding-top: 10px;
+  padding-bottom: 12px;
 }
 
 @media (min-width: @tablet-width) {
   .banner {
+    padding-top: 50px;
+
     text-align: left;
     color: @color-title;
 
     background-image: none;
     background-color: @color-bg-main;
+
+    &::before {
+      content: none;
+    }
   }
 
   .banner__container {
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
+    width: @tablet-width - 2 * @tablet-padding - 90;
+    padding-left: 90px + @tablet-padding;
   }
 
   .banner__title {
     width: 430px;
-    margin-top: 48px;
+    margin-bottom: 42px;
 
     font-size: 60px;
     line-height: 60px;
   }
 
   .banner__text {
-    margin-top: 43px;
-    margin-bottom: 45px;
+    margin-bottom: 48px;
 
     font-size: 20px;
     line-height: 20px;
@@ -87,6 +96,7 @@
 
   .banner__img {
     width: 709px;
+    height: 609px;
     margin: 0;
 
     order: 5;
@@ -107,14 +117,20 @@
 
 @media (min-width: @desktop-width) {
   .banner {
+    margin-bottom: 130px;
+    padding-top: 103px;
+
     background-color: transparent;
 
     &::before {
+      content: "";
+
+      position: absolute;
       top: -120px;
       left: 50%;
 
       width: 50%;
-      height: calc(100% + 120px);
+      height: 696px;
 
       background-image: url("../img/index-background-desktop@1x.jpg");
       background-size: 720px 696px;
@@ -122,17 +138,25 @@
     }
   }
 
-  .banner__container {
-    padding-left: 80px + @desktop-padding;
+  .banner__title {
+    margin-bottom: 40px;
   }
 
-  .banner__title {
-    margin-top: 100px;
+  .banner__container {
+    width: @desktop-width - 2 * @desktop-padding - 80;
+    padding-left: 80px + @desktop-padding;
+
+    overflow: visible;
   }
 
   .banner__img {
     width: 552px;
+    height: 499px;
     margin-left: 400px;
     margin-top: -280px;
+  }
+
+  .banner__text {
+    margin-bottom: 53px;
   }
 }

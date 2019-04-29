@@ -1,9 +1,3 @@
-.guide {
-  margin-bottom: 20px;
-
-  border: 1px dashed red;
-}
-
 .guide__title {
   .reset-header();
 
@@ -33,7 +27,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 0;
+    top: -2px;
     left: -80px;
 
     width: 60px;
@@ -64,7 +58,7 @@
 
 @media (min-width: @tablet-width) {
   .guide {
-    margin-bottom: 0;
+    border-bottom: 1px solid @color-button-hover;
   }
 
   .guide__list {
@@ -75,7 +69,7 @@
   }
 
   .guide__title {
-    margin-bottom: 70px;
+    margin-bottom: 73px;
 
     font-size: 60px;
     line-height: 60px;
@@ -83,30 +77,83 @@
 
   .guide__item {
     box-sizing: border-box;
-    width: 260px;
-    margin-right: 65px;
-    margin-bottom: 75px;
+    width: 325px;
+    min-height: 285px;
+    margin-bottom: 33px;
     padding-top: 110px;
-    padding-right: 10px;
-    padding-bottom: 60px;
+    padding-right: 65px;
 
     font-size: 16px;
     line-height: 24px;
 
+    &:nth-last-child(-n+2) {
+      margin-bottom: 0;
+    }
+
     &::after {
+      top: 0;
       left: 0;
 
       width: 80px;
       height: 80px;
     }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 50%;
+      z-index: -1;
+
+      font-family: @font-regular;
+      font-size: 281px;
+      line-height: 281px;
+      color: @color-bg-sub;
+
+      transform: translateX(85px) translateY(-40px);
+    }
+
+    &--natural::before {
+      content: "1";
+
+      transform: translateX(65px) translateY(-40px);
+    }
+
+    &--powder::before {
+      content: "2";
+    }
+
+    &--mealtime::before {
+      content: "3";
+    }
+
+    &--weight::before {
+      content: "4";
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .guide {
+    border-bottom: none;
+  }
+
   .guide__item {
     width: 245px;
-    margin-right: 0;
-    margin-bottom: 50px;
+    margin-bottom: 0;
     padding-right: 0;
+
+    &::before {
+      transform: translateX(126px) translateY(-40px);
+    }
+
+    &--natural::before {
+      content: "1";
+
+      transform: translateX(106px) translateY(-40px);
+    }
+  }
+
+  .guide__title {
+    margin-bottom: 71px;
   }
 }

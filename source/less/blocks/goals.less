@@ -1,12 +1,18 @@
-.goals {
-  margin-bottom: 12px;
+.goals__item {
+  margin-bottom: 22px;
 
-  border: 1px dashed #000000;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .goals {
-    margin-bottom: 40px;
+  .goals__item {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -14,6 +20,11 @@
   .goals {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 70px;
+  }
+
+  .goals__item {
+    box-sizing: border-box;
+    width: 570px;
+    margin-bottom: 0;
   }
 }

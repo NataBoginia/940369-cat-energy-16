@@ -1,16 +1,14 @@
 .page-footer {
   display: flex;
   flex-direction: column;
-  padding-bottom: 20px;
 
   text-align: center;
 
   background-color: @color-bg-sub;
-  border: 1px dashed #000000;
 }
 
 .page-footer__map {
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 
   &--main {
     background-color: @color-bg-main;
@@ -19,6 +17,21 @@
 
 .page-footer__logo {
   display: block;
+  margin-bottom: 27px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.page-footer__logo-img {
+  width: 128px;
+  height: 24px;
 }
 
 .page-footer__social-list {
@@ -26,92 +39,145 @@
 
   display: flex;
   justify-content: center;
-  margin-top: 25px;
-  margin-bottom: 18px;
-  padding-top: 13px;
-  padding-bottom: 10px;
+  margin-bottom: 22px;
+  padding-top: 17px;
+  padding-bottom: 15px;
 
   border-top: 1px solid @color-border-main;
   border-bottom: 1px solid @color-border-main;
 }
 
+.page-footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.page-footer__social-img {
+  &--vk {
+    width: 22px;
+    height: 12px;
+  }
+
+  &--insta {
+    width: 16px;
+    height: 16px;
+  }
+
+  &--fb {
+    width: 10px;
+    height: 19px;
+  }
+
+  path,
+  circle {
+    fill: @color-text-main;
+  }
+
+  &:hover,
+  &:focus {
+    path,
+    circle {
+      fill: @color-accent;
+    }
+  }
+
+  &:active {
+    path,
+    circle {
+      opacity: 0.3;
+    }
+  }
+}
+
 .page-footer__author {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
 
   font-size: 16px;
   line-height: 16px;
   font-family: @font-add;
   text-align: left;
   color: @color-text-main;
-}
 
-.page-footer__author-name {
-  padding-top: 12px;
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__author-img {
-  margin-left: auto;
-  height: 40px;
-}
+  width: 27px;
+  height: 34px;
 
-.page-footer__social-link {
-  display: block;
-  width: 40px;
-  height: 40px;
-
-  background-position: center;
-  background-repeat: no-repeat;
-
-  &--vk {
-    margin-right: 14px;
-
-    background-image: url("../img/icon-vk-mobile.svg");
-    background-size: 22px 12px;
+  path {
+    fill: @color-text-main;
   }
 
-  &--insta {
-    background-image: url("../img/icon-insta-mobile.svg");
-    background-size: 17px 17px;
-  }
-
-  &--fb {
-    background-image: url("../img/icon-fb-mobile.svg");
-    background-size: 10px 19px;
+  &:hover,
+  &:focus {
+    path {
+      fill: @color-accent;
+    }
   }
 }
 
 @media (min-width: @tablet-width) {
-  .page-footer {
-    padding-bottom: 55px;
-  }
-
   .page-footer__map {
-    margin-bottom: 55px;
+    margin-bottom: 44px;
   }
 
   .page-footer__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    margin-bottom: 45px;
   }
 
   .page-footer__logo {
     width: 128px;
+    height: 24px;
+    margin-bottom: 0;
   }
 
   .page-footer__social-list {
-    width: 150px;
-    margin: 0;
-    padding: 0;
+    width: 140px;
+    margin-left: 40px;
+    margin-bottom: 0;
+    padding-top: 10px;
 
     border: none;
   }
 
+  .page-footer__social-link {
+    justify-content: flex-start;
+  }
+
+  .page-footer__social-img {
+    &--vk {
+      width: 30px;
+      height: 16px;
+    }
+
+    &--insta {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fb {
+      width: 14px;
+      height: 28px;
+    }
+  }
+
   .page-footer__author {
-    width: 192px;
+    width: 165px;
+    margin-bottom: 0;
   }
 }
-
-// @media (min-width: @desktop-width) {
-//
-// }

@@ -1,13 +1,8 @@
 .example {
-  display: flex;
-  flex-direction: column;
-  padding-top: 15px;
-
   font-family: @font-regular;
   color: @color-title;
 
   background-color: @color-bg-sub;
-  border: 1px dashed #000000;
 }
 
 .example__title {
@@ -21,7 +16,8 @@
 
 .example__text {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
+  padding-right: 14px;
 
   font-size: 14px;
   line-height: 18px;
@@ -34,34 +30,35 @@
 
   display: flex;
   justify-content: space-between;
-  margin-bottom: 35px;
+  margin-bottom: 19px;
 }
 
 .example__parameter {
-  width: 122px;
-  padding-top: 13px;
+  width: 124px;
 
   text-align: center;
-
-  border: 1px solid @color-border-main;
-  border-radius: 3px;
 }
 
 .example__parameter-value {
   display: block;
-  margin-bottom: 9px;
+  padding-top: 13px;
+  padding-bottom: 17px;
+  margin-bottom: -9px;
 
   font-size: 24px;
   line-height: 24px;
   font-weight: normal;
   text-transform: uppercase;
+
+  border: 1px solid @color-border-main;
+  border-radius: 3px;
 }
 
 .example__parameter-name {
-  display: block;
-  margin-bottom: -16px;
-  margin-right: 19px;
-  margin-left: 19px;
+  display: inline-block;
+  width: 77px;
+  padding-right: 5px;
+  padding-left: 5px;
 
   font-size: 12px;
   line-height: 12px;
@@ -73,6 +70,7 @@
 
 .example__cost {
   align-self: center;
+  margin-top: 0;
   margin-bottom: 35px;
 
   font-size: 14px;
@@ -81,8 +79,26 @@
   text-align: center;
 }
 
-.example-slider {
-  padding-bottom: 30px;
+@media (max-width: @tablet-width) {
+  .example__container {
+    &--outer {
+      width: @mobile-width - 2 * @mobile-padding;
+      margin-right: auto;
+      margin-left: auto;
+      padding-top: 17px;
+      padding-right: @mobile-padding;
+      padding-left: @mobile-padding;
+    }
+  }
+
+  .example__slider {
+    width: @mobile-width - 2 * @mobile-padding;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: @mobile-padding;
+    padding-bottom: 27px;
+    padding-left: @mobile-padding;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -91,64 +107,143 @@
   }
 
   .example__title {
-    margin-bottom: 60px;
+    margin-bottom: 64px;
 
     font-size: 60px;
   }
 
-  .example__wrapper {
-    display: flex;
+  .example__list {
     justify-content: space-between;
-    flex-wrap: wrap;
-
-    &--outer {
-      flex-direction: column;
-    }
+    width: 367px;
+    margin-bottom: 0;
   }
 
   .example__parameter {
-    margin-right: 42px;
+    flex-shrink: 0;
+    width: 162px;
+  }
+
+  .example__parameter-value {
+    padding-top: 14px;
+    padding-bottom: 20px;
+    margin-bottom: -13px;
+
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .example__parameter-name {
+    width: auto;
+    max-width: 132px;
+
+    font-size: 14px;
+    line-height: 14px;
+
+    background-color: @color-bg-main;
   }
 
   .example__text {
-    width: 100%;
+    margin-bottom: 53px;
 
     font-size: 16px;
     line-height: 24px;
   }
 
-  .example__slider {
-    background-color: @color-bg-sub;
+  .example__cost {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    margin-bottom: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
   }
 
-  .example__parameter-name {
-    background-color: @color-bg-main;
+  .example__cost-name {
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+  .example__slider {
+    background-image: linear-gradient(@color-bg-main 169px, transparent 169px), linear-gradient(to right, @color-bg-sub 50%, @color-button-hover 50%);
+  }
+
+  .example__container {
+    &--outer {
+      width: @tablet-width - 2 * @tablet-padding;
+      margin-right: auto;
+      margin-bottom: 80px;
+      margin-left: auto;
+      padding-top: 17px;
+      padding-right: @tablet-padding;
+      padding-left: @tablet-padding;
+    }
+
+    &--inner {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &--slider {
+      width: @tablet-width - 2 * @tablet-padding;
+      margin-right: auto;
+      margin-left: auto;
+      padding-right: @tablet-padding;
+      padding-bottom: 27px;
+      padding-left: @tablet-padding;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .example__wrapper {
-    &--outer {
-      flex-direction: row;
+  .example {
+    background-image: linear-gradient(@color-bg-main 135px, transparent 135px), linear-gradient(to right, @color-bg-sub 50%, @color-button-hover 50%);
+  }
 
-      background-color: @color-bg-sub;
+  .example__container {
+    &--outer {
+      width: 445px;
+      margin-right: 0;
+      padding-right: 0;
     }
 
     &--inner {
       flex-direction: column;
-      justify-content: flex-start;
-      width: 430px;
-      padding-top: 70px;
-      padding-bottom: 45px;
+    }
+
+    &--main {
+      display: flex;
+      justify-content: space-between;
+      width: @desktop-width - 2 * @desktop-padding;
+      margin-right: auto;
+      margin-left: auto;
+      padding-right: @desktop-padding;
+      padding-left: @desktop-padding;
     }
   }
 
   .example__title {
-    margin-bottom: 75px;
+    margin-bottom: 145px;
   }
 
   .example__text {
-    margin-bottom: 70px;
+    margin-bottom: 68px;
+  }
+
+  .example__list {
+    margin-bottom: 55px;
+  }
+
+  .example__cost {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 327px;
+  }
+
+  .example__cost-name {
+    margin-bottom: 0;
   }
 
   .example__parameter-name {
@@ -156,8 +251,9 @@
   }
 
   .example__slider {
-    margin-top: -200px;
+    width: 690px;
+    margin-top: -55px;
 
-    background-color: transparent;
+    background-image: linear-gradient(@color-bg-main 190px, transparent 190px), linear-gradient(to right, @color-bg-sub 408px, @color-button-hover 408px);
   }
 }

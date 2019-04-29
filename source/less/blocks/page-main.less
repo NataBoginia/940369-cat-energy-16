@@ -1,7 +1,28 @@
+.page-main {
+  overflow: hidden;
+
+  &--index {
+    overflow: visible;
+  }
+}
+
+.page-main__banner {
+  margin-bottom: 23px;
+}
+
+.page-main__goals {
+  margin-bottom: 18px;
+}
+
+.page-main__guide {
+  margin-bottom: 45px;
+}
+
 .page-main__title {
   .reset-header();
 
-  margin-bottom: 27px;
+  margin-top: 15px;
+  margin-bottom: 25px;
 
   font-size: 36px;
   line-height: 60px;
@@ -9,14 +30,13 @@
 }
 
 .page-main__program-request {
-  margin-bottom: 35px;
-
-  border: 1px dashed #000000;
+  margin-bottom: 33px;
 }
 
 .page-main__request-desc {
   margin: 0;
-  margin-bottom: 35px;
+  margin-right: 50px;
+  margin-bottom: 30px;
 
   font-size: 14px;
   line-height: 18px;
@@ -27,34 +47,53 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-main__program-request {
-    margin-left: 40px;
-    margin-right: 40px;
+  .page-main__banner {
+    margin-bottom: 0;
   }
 
   .page-main__title {
     margin-top: 50px;
+    margin-bottom: 54px;
 
     font-size: 60px;
   }
 
+  .page-main__program-request {
+    margin-bottom: 51px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
   .page-main__request-desc {
-    margin-top: 30px;
-    margin-bottom: 60px;
     max-width: 350px;
+    margin-bottom: 58px;
 
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .page-main__goals {
+    margin-bottom: 45px;
+  }
+
+  .page-main__guide {
+    margin-bottom: 25px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-main__title {
-    margin-top: 65px;
+    margin-top: 67px;
+    margin-bottom: 54px;
   }
 
   .page-main__program-request {
-    margin-left: 0;
-    margin-right: 0;
+    margin-bottom: 63px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .page-main__goals {
+    margin-bottom: 75px;
   }
 }
