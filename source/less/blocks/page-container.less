@@ -1,27 +1,26 @@
 .page-container {
-  width: @mobile-width - 2 * @mobile-padding;
+  min-width: @mobile-width - 2 * @mobile-padding;
+  max-width: @mobile-width * 1.4;
+  width: 87.5%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: @mobile-padding;
-  padding-left: @mobile-padding;
 }
 
 @media (min-width: @tablet-width) {
   .page-container {
-    width: @tablet-width - 2 * @tablet-padding;
+    min-width: @tablet-width - 2 * @tablet-padding;
+    max-width: @tablet-width * 1.2;
+    width: 92.2%;
     margin-right: auto;
     margin-left: auto;
-    padding-right: @tablet-padding;
-    padding-left: @tablet-padding;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-container {
     width: @desktop-width - 2 * @desktop-padding;
+    max-width: none;
     margin-right: auto;
     margin-left: auto;
-    padding-right: @desktop-padding;
-    padding-left: @desktop-padding;
   }
 }

@@ -42,7 +42,9 @@
 
 @media (min-width: @tablet-width) {
   .map__desc {
-    width: @tablet-width - 2 * @tablet-padding - 2 * 40;
+    min-width: @tablet-width - 2 * @tablet-padding - 2*40;
+    max-width: @tablet-width * 1.2 - 2*40;
+    width: calc(92.2% - 2 * 40px);
     padding-top: 65px;
     padding-right: @tablet-padding + 40;
     padding-bottom: 55px;

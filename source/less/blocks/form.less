@@ -373,10 +373,11 @@
 
     &--row {
       width: 285px - 60;
-      margin-bottom: 53px;
+      margin-bottom: 48px;
+      padding-top: 5px;
 
-      &:nth-last-child(-n+2) {
-        margin-bottom: 0;
+      &:last-child {
+        margin-bottom: 48px;
       }
     }
   }
@@ -398,7 +399,7 @@
     }
 
     &--options {
-      margin-top: -16px;
+      margin-top: -20px;
     }
   }
 
@@ -476,7 +477,6 @@
     align-items: center;
 
     &--btn {
-      margin-top: 49px;
       margin-bottom: 20px;
     }
 
@@ -530,6 +530,10 @@
 
       &:nth-child(4n) {
         margin-right: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
