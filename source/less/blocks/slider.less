@@ -1,4 +1,5 @@
 .slider__img-container {
+  display: block;
   margin-bottom: 19px;
   margin-right: -20px;
   margin-left: -20px;
@@ -8,7 +9,7 @@
 
 .slider__img {
   width: 320px;
-  height: 240px;
+  height: auto;
 }
 
 .slider__controls {
@@ -148,14 +149,12 @@
 
 @media (min-width: @tablet-width) {
   .slider__img-container {
-    margin-right: 0;
+    margin: 0;
     margin-bottom: 7px;
-    margin-left: 0;
   }
 
   .slider__img {
     width: 690px;
-    height: auto;
   }
 
   .slider__controls {
@@ -303,7 +302,9 @@
 
 @media (min-width: @desktop-width) {
   .slider__img-container {
+    margin-right: -75px;
     margin-bottom: 28px;
+    margin-left: 0;
   }
 
   .slider__controls {

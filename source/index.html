@@ -5,13 +5,21 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.js" async></script>
   </head>
   <body>
     <header class="page-header">
       <nav class="page-header__menu main-menu">
         <div class="main-menu__wrapper">
           <a class="main-menu__logo">
-            <img class="main-menu__logo-img" src="img/logo-mobile.svg" alt="Логотип компании Кэт энерджи" width="191" height="39">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="main-menu__logo-img" src="img/logo-mobile.svg" alt="Логотип компании Кэт энерджи" width="191" height="39">
+            </picture>
           </a>
           <button class="main-menu__toggle main-menu__toggle--opened" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -38,7 +46,13 @@
         <div class="banner__container page-container">
           <h2 class="banner__title">Функциональное питание для котов</h2>
           <p class="banner__text">Занялся собой? Займись котом!</p>
-          <img class="banner__img" src="img/index-can-mobile@1x.png" alt="Упаковка питания для котов Кэт энерджи" width="280" height="270">
+          <div class="banner__img-wrapper">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+              <img class="banner__img" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@1x.png 1x, img/index-can-mobile@2x.png 2x" alt="Упаковка питания для котов Кэт энерджи">
+            </picture>
+          </div>
           <a class="banner__btn button" href="form.html">Подобрать программу</a>
         </div>
       </section>
@@ -106,8 +120,16 @@
           <div class="example__slider">
             <div class="example__container--slider slider">
               <div class="slider__img-container">
-                <img class="slider__img slider__img--before" src="img/after-tablet@1x.png" alt="Кот Борис до начала питания кормом Cat Energy Slim" width="320" height="240">
-                <img class="visually-hidden slider__img slider__img--after" src="img/after-mobile@1x.png" alt="Кот Борис после двух месяцев питания кормом Cat Energy Slim" width="320" height="240">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                  <img class="slider__img slider__img--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Кот Борис до начала питания кормом Cat Energy Slim">
+                </picture>
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                  <img class="visually-hidden slider__img slider__img--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Кот Борис после двух месяцев питания кормом Cat Energy Slim">
+                </picture>
               </div>
               <div class="slider__controls">
                 <button class="slider__btn slider__btn--before" type="button">Было</button>
