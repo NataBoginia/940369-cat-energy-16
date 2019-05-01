@@ -22,6 +22,10 @@
     background-position: center;
 
     z-index: -1;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
   }
 }
 
@@ -43,9 +47,13 @@
   text-transform: uppercase;
 }
 
+.banner__img-wrapper {
+  display: block;
+}
+
 .banner__img {
   width: 280px;
-  height: 270px;
+  height: auto;
 }
 
 .banner__btn {
@@ -75,8 +83,10 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
-    width: @tablet-width - 2 * @tablet-padding - 90;
-    padding-left: 90px + @tablet-padding;
+    min-width: @tablet-width - 2 * @tablet-padding - 90;
+    max-width: @tablet-width * 1.2 - 90;
+    width: calc(92.2% - 60px);
+    padding-left: 75px + @tablet-padding;
   }
 
   .banner__title {
@@ -96,14 +106,18 @@
 
   .banner__img {
     width: 709px;
-    height: 609px;
+  }
+
+  .banner__img-wrapper {
     margin: 0;
+    margin-left: -90px;
 
     order: 5;
   }
 
   .banner__btn {
     width: auto;
+    overflow: visible;
     margin-right: auto;
     margin-bottom: -80px;
     padding: 15px 27px 17px 27px;
@@ -117,7 +131,7 @@
 
 @media (min-width: @desktop-width) {
   .banner {
-    margin-bottom: 130px;
+    margin-bottom: 133px;
     padding-top: 103px;
 
     background-color: transparent;
@@ -135,6 +149,10 @@
       background-image: url("../img/index-background-desktop@1x.jpg");
       background-size: 720px 696px;
       background-position: bottom right;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
     }
   }
 
@@ -144,16 +162,19 @@
 
   .banner__container {
     width: @desktop-width - 2 * @desktop-padding - 80;
-    padding-left: 80px + @desktop-padding;
+    max-width: none;
+    padding-left: 40px + @desktop-padding;
 
     overflow: visible;
   }
 
+  .banner__img-wrapper {
+    margin-left: 370px;
+    margin-top: -285px;
+  }
+
   .banner__img {
     width: 552px;
-    height: 499px;
-    margin-left: 400px;
-    margin-top: -280px;
   }
 
   .banner__text {
