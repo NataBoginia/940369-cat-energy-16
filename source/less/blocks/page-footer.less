@@ -58,6 +58,8 @@
 }
 
 .page-footer__social-img {
+  fill: @color-text-main;
+
   &--vk {
     width: 22px;
     height: 12px;
@@ -73,25 +75,18 @@
     height: 19px;
   }
 
-  path,
-  circle {
-    fill: @color-text-main;
-  }
-
   &:hover,
   &:focus {
-    path,
-    circle {
-      fill: @color-accent;
-    }
+    fill: @color-accent;
   }
 
   &:active {
-    path,
-    circle {
-      opacity: 0.3;
-    }
+    opacity: 0.3;
   }
+}
+
+use.page-footer__social-img--fb-mobile {
+  display: none;
 }
 
 .page-footer__author {
@@ -115,15 +110,11 @@
   width: 27px;
   height: 34px;
 
-  path {
-    fill: @color-text-main;
-  }
+  fill: @color-text-main;
 
   &:hover,
   &:focus {
-    path {
-      fill: @color-accent;
-    }
+    fill: @color-accent;
   }
 }
 
