@@ -1,15 +1,44 @@
-.slider__img-container {
-  display: block;
+.slider__images-container {
+  display: flex;
+  justify-content: space-around;
+  width: 320px;
+  height: 240px;
   margin-bottom: 19px;
-  margin-right: -20px;
-  margin-left: -20px;
 
-  text-align: center;
+  overflow: hidden;
+}
+
+.slider__img-container {
+  position: relative;
+  width: 320px;
+  height: 240px;
+
+  overflow: hidden;
+
+  &--before {
+    width: 320px;
+  }
+
+  &--after {
+    width: 0;
+  }
 }
 
 .slider__img {
+  position: absolute;
+  top: 0;
+
+  max-width: none;
   width: 320px;
-  height: auto;
+  object-fit: cover;
+
+  &--before {
+    left: 0;
+  }
+
+  &--after {
+    right: 0;
+  }
 }
 
 .slider__controls {
@@ -17,7 +46,9 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  width: 100%;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 30px;
 }
 
@@ -55,14 +86,14 @@
 }
 
 .slider__range {
-  min-width: 82px;
+  width: 82px;
 
   appearance: none;
   background-color: transparent;
 
   // Стили для слайдера в Firefox
   &::-moz-range-track {
-    min-width: 72px;
+    width: 72px;
     height: 12px;
     padding-left: 5px;
     padding-right: 5px;
@@ -148,9 +179,23 @@
 }
 
 @media (min-width: @tablet-width) {
-  .slider__img-container {
+  .slider__images-container {
+    width: 690px;
+    height: 517px;
     margin: 0;
     margin-bottom: 7px;
+  }
+
+  .slider__img-container {
+    height: 517px;
+
+    &--before {
+      width: 345px;
+    }
+
+    &--after {
+      width: 345px;
+    }
   }
 
   .slider__img {
@@ -158,6 +203,7 @@
   }
 
   .slider__controls {
+    width: 675px;
     padding-bottom: 38px;
   }
 
@@ -301,7 +347,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .slider__img-container {
+  .slider__images-container {
     margin-right: -75px;
     margin-bottom: 28px;
     margin-left: 0;
@@ -310,13 +356,23 @@
   .slider__controls {
     justify-content: space-between;
     width: 580px;
-    margin-left: auto;
     margin-bottom: 28px;
+    margin-right: 40px;
     padding-right: 0;
     padding-left: 0;
   }
 
   .slider__btn--after {
     padding-right: 0;
+  }
+
+  .slider__img-container {
+    &--before {
+      width: 365px;
+    }
+
+    &--after {
+      width: 325px;
+    }
   }
 }

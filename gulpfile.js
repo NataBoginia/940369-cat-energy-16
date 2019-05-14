@@ -45,10 +45,10 @@ gulp.task("server", function () {
     "source/img/icon-insta.svg",
     "source/img/icon-vk.svg"
   ], gulp.series("sprite", "refresh"));
-  gulp.watch("source/*.html", gulp.series("refresh"));
+  gulp.watch(["source/*.html", "source/js/**"], gulp.series("refresh"));
 });
 
-gulp.task("refresh", function () {
+gulp.task("refresh", function (done) {
   server.reload();
   done();
 });
@@ -97,6 +97,7 @@ gulp.task("webp", function () {
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "optim", "webp", "sprite"));
+// gulp.task("build", gulp.series("clean", "copy", "css", "optim", "webp", "sprite"));
+gulp.task("build", gulp.series("clean", "copy", "css", "webp", "sprite"));
 
 gulp.task("start", gulp.series("build", "server"));
