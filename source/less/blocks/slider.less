@@ -54,7 +54,7 @@
 
 .slider__btn {
   flex-shrink: 0;
-  padding: 10px;
+  padding: 10px 0;
 
   font-size: 16px;
   line-height: 20px;
@@ -66,12 +66,12 @@
   cursor: pointer;
 
   &--before {
-    margin-right: 10px;
+    margin-right: 20px;
     text-align: right;
   }
 
   &--after {
-    margin-left: 10px;
+    margin-left: 20px;
     text-align: left;
   }
 
@@ -212,21 +212,19 @@
 
     font-size: 20px;
 
-    &::after {
-      content: "";
+    border-bottom: 1px dotted @color-border-hover;
 
-      position: absolute;
-      bottom: 2px;
-      left: 0;
+    &:hover,
+    &:focus {
+      color: @color-title;
 
-      box-sizing: border-box;
-      width: calc(100% - 20px);
-      height: 1px;
-      margin-left: 10px;
-      margin-right: 10px;
+      border-style: solid;
+    }
 
-      background-color: transparent;
-      border-bottom: 1px dotted @color-border-hover;
+    &:active {
+      color: @color-title;
+
+      border-color: transparent;
     }
   }
 
