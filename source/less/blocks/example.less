@@ -79,7 +79,7 @@
   text-align: center;
 }
 
-@media (max-width: @tablet-width) {
+@media (max-width: @tablet-width - 1) {
   .example__container {
     &--outer {
       min-width: @mobile-width - 2 * @mobile-padding;
@@ -92,12 +92,10 @@
   }
 
   .example__slider {
-    min-width: @mobile-width - 2 * @mobile-padding;
-    max-width: @mobile-width * 1.5;
-    width: 87.5%;
+    width: 320px;
     margin-right: auto;
     margin-left: auto;
-    padding-bottom: 27px;
+    padding-bottom: 30px;
   }
 }
 
@@ -187,12 +185,13 @@
     }
 
     &--slider {
-      min-width: @tablet-width - 2 * @tablet-padding;
-      max-width: @tablet-width * 1.2;
-      width: 92.2%;
+      width: 690px;
       margin-right: auto;
       margin-left: auto;
-      padding-bottom: 27px;
+      padding-bottom: 32px;
+      padding-left: 10px;
+
+      text-align: center;
     }
   }
 }
@@ -251,7 +250,9 @@
   .example__slider {
     width: 690px;
     margin-top: -55px;
+    margin-left: auto;
+    margin-right: -40px;
 
-    background-image: linear-gradient(@color-bg-main 190px, transparent 190px), linear-gradient(to right, @color-bg-sub 408px, @color-button-hover 408px);
+    background-image: linear-gradient(@color-bg-main 190px, transparent 190px), linear-gradient(to right, @color-bg-sub 365px, @color-button-hover 365px);
   }
 }

@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <title>Подбор программы Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel=”preload”  href=”fonts/oswaldmedium.woff2” as=”font” crossorigin=”anonymous”>
+    <link rel=”preload”  href=”fonts/oswaldmedium.woff” as=”font” crossorigin=”anonymous”>
+    <link rel=”preload”  href=”fonts/oswaldregular.woff2” as=”font” crossorigin=”anonymous”>
+    <link rel=”preload”  href=”fonts/oswaldregular.woff” as=”font” crossorigin=”anonymous”>
     <link rel="stylesheet" href="css/style.min.css">
     <script>
       document.createElement( "picture" );
@@ -78,7 +82,7 @@
                   <label class="form__label form__label--icon form__label--radio" for="goal-pro">Набор массы</label>
                 </li>
                 <li class="form__input-wrapper form__input-wrapper--options">
-                  <input class="visually-hidden form__input form__input--radio" id="goal-unknown" name="goal-type" type="radio" value="unknown" disabled>
+                  <input class="visually-hidden form__input form__input--radio" id="goal-unknown" name="goal-type" type="radio" value="unknown">
                   <label class="form__label form__label--icon form__label--radio" for="goal-unknown">Не знаю (нужен ваш совет)</label>
                 </li>
               </ul>
@@ -90,7 +94,7 @@
             <ul class="form__list form__wrapper form__wrapper--contact">
               <li class="form__input-wrapper form__list--column">
                 <label class="form__label form__label--text" for="email">E-mail:*</label>
-                <input class="form__input form__input--error form__input--text form__input--icon form__input--email" id="email" name="email" type="email" placeholder="kuklachev@gmail.com">
+                <input class="form__input form__input--text form__input--icon form__input--email" id="email" name="email" type="email" placeholder="kuklachev@gmail.com">
               </li>
               <li class="form__input-wrapper form__list--column">
                 <label class="form__label form__label--text" for="phone">Телефон:*</label>
@@ -121,7 +125,7 @@
                 <label class="form__label form__label--icon form__label--checkbox" for="milk">Молоко</label>
               </li>
               <li class="form__input-wrapper form__input-wrapper--options form__input-wrapper--row">
-                <input class="visually-hidden form__input form__input--checkbox" id="vitamins" name="vitamins" type="checkbox" disabled>
+                <input class="visually-hidden form__input form__input--checkbox" id="vitamins" name="vitamins" type="checkbox">
                 <label class="form__label form__label--icon form__label--checkbox" for="vitamins">Витамины</label>
               </li>
             </ul>
@@ -159,7 +163,7 @@
       </section>
 
       <div class="page-footer__info page-container">
-        <a class="page-footer__logo">
+        <a class="page-footer__logo" href="index.html">
           <img class="page-footer__logo-img" src="img/logo-footer.svg" alt="Логотип компании Кэт энерджи" width="128" height="24">
         </a>
         <ul class="page-footer__social-list">
