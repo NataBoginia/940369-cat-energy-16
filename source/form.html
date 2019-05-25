@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <title>Подбор программы Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel=”preload”  href=”fonts/oswaldmedium.woff2” as=”font” crossorigin=”anonymous”>
-    <link rel=”preload”  href=”fonts/oswaldmedium.woff” as=”font” crossorigin=”anonymous”>
-    <link rel=”preload”  href=”fonts/oswaldregular.woff2” as=”font” crossorigin=”anonymous”>
-    <link rel=”preload”  href=”fonts/oswaldregular.woff” as=”font” crossorigin=”anonymous”>
+    <link rel="preload"  href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload"  href="fonts/oswaldmedium.woff" as="font" crossorigin="anonymous">
+    <link rel="preload"  href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload"  href="fonts/oswaldregular.woff" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
     <script>
       document.createElement( "picture" );
@@ -29,7 +29,7 @@
               <img class="main-menu__logo-img" src="img/logo-mobile.svg" alt="Логотип компании Кэт энерджи" width="191" height="39">
             </picture>
           </a>
-          <button class="main-menu__toggle  main-menu__toggle--opened" type="button">
+          <button class="main-menu__toggle  main-menu__toggle--opened main-menu__toggle--hidden" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
         </div>
@@ -92,11 +92,11 @@
           <fieldset class="form__part">
             <legend class="form__title">Контактные данные (владельца кота)</legend>
             <ul class="form__list form__wrapper form__wrapper--contact">
-              <li class="form__input-wrapper form__list--column">
+              <li class="form__input-wrapper form__list form__list--column">
                 <label class="form__label form__label--text" for="email">E-mail:*</label>
                 <input class="form__input form__input--text form__input--icon form__input--email" id="email" name="email" type="email" placeholder="kuklachev@gmail.com">
               </li>
-              <li class="form__input-wrapper form__list--column">
+              <li class="form__input-wrapper form__list form__list--column">
                 <label class="form__label form__label--text" for="phone">Телефон:*</label>
                 <input class="form__input form__input--text form__input--icon form__input--phone" id="phone" name="phone" type="tel" placeholder="8 (960) 900-60-90">
               </li>

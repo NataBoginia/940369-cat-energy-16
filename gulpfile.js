@@ -106,9 +106,9 @@ gulp.task("html", function () {
 
 gulp.task("js", function () {
   return pipeline(
-        gulp.src("source/js/*.js"),
-        uglify(),
-        gulp.dest("build/js")
+    gulp.src("source/js/*.js"),
+    uglify(),
+    gulp.dest("build/js")
   );
 });
 

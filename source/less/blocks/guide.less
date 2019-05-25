@@ -80,7 +80,7 @@
 
   .guide__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin-left: 0;
   }
@@ -105,6 +105,10 @@
 
     &:nth-last-child(-n+2) {
       margin-bottom: 0;
+    }
+
+    &:nth-child(2n) {
+      margin-left: auto;
     }
 
     &::after {
@@ -156,6 +160,7 @@
 
   .guide__item {
     width: 245px;
+    margin-right: 80px;
     margin-bottom: 0;
     padding-right: 0;
 
@@ -167,6 +172,14 @@
       content: "1";
 
       transform: translateX(106px) translateY(-40px);
+    }
+
+    &:nth-child(2n) {
+      margin-left: 0;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
     }
   }
 
